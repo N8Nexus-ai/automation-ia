@@ -15,7 +15,7 @@ export function Header() {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">F</span>
             </div>
-            <span className="text-xl font-bold text-foreground">Fluxo.ai</span>
+            <span className="text-xl font-bold text-foreground">Nexus.ai</span>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
