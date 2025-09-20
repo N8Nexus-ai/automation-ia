@@ -7,7 +7,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Fluxo.ai - Consultoria em Automação e IA",
+  title: "Nexus.ai - Consultoria em Automação e IA",
   description:
     "Transformamos tarefas repetitivas em automações inteligentes. Economize 99,3% do tempo da sua equipe com nossas soluções de IA.",
   generator: "v0.app",

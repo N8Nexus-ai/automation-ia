@@ -10,13 +10,13 @@ export function Footer() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-sm">F</span>
               </div>
-              <span className="text-xl font-bold text-foreground">Fluxo.ai</span>
+              <span className="text-xl font-bold text-foreground">Nexus.ai</span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Construímos automações e agentes de IA para liberar sua equipe e focar no crescimento do seu negócio.
             </p>
             <div className="text-sm text-muted-foreground">
-              <p>📧 contato@fluxo.ai</p>
+              <p>📧 contato@nexus.ai</p>
               <p>📱 (11) 99999-9999</p>
             </div>
           </div>
@@ -77,7 +77,7 @@ export function Footer() {
         <Separator className="mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© 2024 Fluxo.ai. Todos os direitos reservados.</p>
+          <p>© 2024 Nexus.ai. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-foreground transition-colors">
               Privacidade
