@@ -43,16 +43,6 @@ export const metadata: Metadata = {
     description: "Transformamos tarefas repetitivas em automações inteligentes. Economize 99,3% do tempo da sua equipe com nossas soluções de IA.",
     images: ['/Logo sem fundo.png'],
   },
-  icons: {
-    icon: [
-      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
-      { url: '/favicon.png', type: 'image/png', sizes: '16x16' }
-    ],
-    shortcut: '/favicon.png',
-    apple: [
-      { url: '/favicon.png', sizes: '180x180', type: 'image/png' }
-    ],
-  },
 }
 
 export default function RootLayout({
