@@ -14,8 +14,8 @@ export function HeroSection() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-balance mb-6 leading-tight">
-            Transformamos <span className="text-primary">automação</span> em{" "}
-            <span className="text-accent">resultados</span>
+            Transformamos <span className="bg-gradient-to-r from-primary to-indigo-400 bg-clip-text text-transparent">automação</span> em{" "}
+            <span className="bg-gradient-to-r from-primary to-indigo-400 bg-clip-text text-transparent">resultados</span>
           </h1>
 
           <p className="text-xl text-muted-foreground text-balance mb-8 max-w-2xl mx-auto leading-relaxed">

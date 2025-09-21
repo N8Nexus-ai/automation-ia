@@ -37,7 +37,7 @@ export function AnimatedBackground() {
 
     const createParticles = () => {
       const particles: Particle[] = []
-      const particleCount = Math.floor((canvas.width * canvas.height) / 15000)
+      const particleCount = Math.floor((canvas.width * canvas.height) / 10000)
 
       for (let i = 0; i < particleCount; i++) {
         particles.push({
@@ -46,7 +46,7 @@ export function AnimatedBackground() {
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.2,
+          opacity: Math.random() * 0.5 + 0.3,
         })
       }
 
@@ -80,7 +80,7 @@ export function AnimatedBackground() {
             connections.push({
               from: particlesRef.current[i],
               to: particlesRef.current[j],
-              opacity: (1 - distance / maxDistance) * 0.3,
+              opacity: (1 - distance / maxDistance) * 0.4,
             })
           }
         }
@@ -97,8 +97,8 @@ export function AnimatedBackground() {
         ctx.beginPath()
         ctx.moveTo(connection.from.x, connection.from.y)
         ctx.lineTo(connection.to.x, connection.to.y)
-        ctx.strokeStyle = `rgba(112, 128, 255, ${connection.opacity})`
-        ctx.lineWidth = 0.5
+        ctx.strokeStyle = `rgba(59, 130, 246, 0.3)`
+        ctx.lineWidth = 0.8
         ctx.stroke()
       })
 
@@ -147,7 +147,7 @@ export function AnimatedBackground() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)" }}
+      style={{ background: "#000000" }}
     />
   )
 }
