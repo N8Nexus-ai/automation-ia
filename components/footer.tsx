@@ -6,9 +6,13 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">F</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-8 h-8 flex items-center justify-center">
+                <img 
+                  src="/Logo sem fundo.png" 
+                  alt="Nexus.ai Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold text-foreground">Nexus.ai</span>
             </div>
