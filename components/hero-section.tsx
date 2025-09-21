@@ -19,8 +19,7 @@ export function HeroSection() {
           </h1>
 
           <p className="text-xl text-muted-foreground text-balance mb-8 max-w-2xl mx-auto leading-relaxed">
-            Construímos automações e agentes de IA que liberam sua equipe para focar no crescimento. Economize até 99,3%
-            do tempo em processos manuais.
+            Construímos automações e agentes de IA que liberam sua equipe para focar no crescimento. Com integração AWS e flexibilidade total de infraestrutura n8n - você escolhe como quer trabalhar.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
