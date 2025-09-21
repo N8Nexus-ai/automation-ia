@@ -45,11 +45,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
       { url: '/favicon.png', type: 'image/png', sizes: '16x16' }
     ],
-    shortcut: '/favicon.ico',
+    shortcut: '/favicon.png',
     apple: [
       { url: '/favicon.png', sizes: '180x180', type: 'image/png' }
     ],
@@ -64,11 +63,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark">
       <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+        {/* Favicon tags removidas - usando apenas os metadados do Next.js */}
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
