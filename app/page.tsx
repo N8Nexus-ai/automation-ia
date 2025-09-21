@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { StatsSection } from "@/components/stats-section"
 import { ServicesSection } from "@/components/services-section"
+import { InfrastructureSection } from "@/components/infrastructure-section"
 import { ProcessSection } from "@/components/process-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
@@ -19,6 +20,7 @@ export default function HomePage() {
         <HeroSection />
         <StatsSection />
         <ServicesSection />
+        <InfrastructureSection />
         <ProcessSection />
         <CTASection />
         <Footer />

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Bot, Database, Workflow, MessageSquare, FileText, Users } from "lucide-react"
+import { Bot, Database, Workflow, MessageSquare, FileText, Users, Cloud, Server } from "lucide-react"
 
 export function ServicesSection() {
   const services = [
@@ -39,6 +39,18 @@ export function ServicesSection() {
       description: "Automatize o relacionamento com clientes desde o primeiro contato até o pós-venda.",
       features: ["CRM automatizado", "Follow-up inteligente", "Análise de satisfação"],
     },
+    {
+      icon: Cloud,
+      title: "Integração AWS",
+      description: "Conectamos suas automações diretamente com a nuvem AWS para máxima escalabilidade e confiabilidade.",
+      features: ["S3, Lambda, RDS", "API Gateway", "CloudWatch", "SQS/SNS"],
+    },
+    {
+      icon: Server,
+      title: "Infraestrutura n8n",
+      description: "Escolha entre ter sua própria instância n8n ou deixar que cuidemos de toda a infraestrutura para você.",
+      features: ["Instância própria n8n", "Infraestrutura gerenciada", "Backup automático", "Monitoramento 24/7"],
+    },
   ]
 
   return (
@@ -54,7 +66,7 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <Card
               key={index}

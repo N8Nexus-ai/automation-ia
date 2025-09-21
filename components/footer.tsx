@@ -81,7 +81,7 @@ export function Footer() {
         <Separator className="mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© 2024 Nexus.ai. Todos os direitos reservados.</p>
+          <p>© 2025 Nexus.ai. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-foreground transition-colors">
               Privacidade
