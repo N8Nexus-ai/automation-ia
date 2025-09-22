@@ -55,7 +55,27 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   }
 
   const handleEmailClick = () => {
-    window.location.href = `mailto:${email}?subject=Interesse em Automação&body=Olá! Gostaria de saber mais sobre os serviços de automação da Nexus.ai.`
+    console.log('handleEmailClick chamado')
+    
+    const subject = encodeURIComponent('Interesse em Automação')
+    const body = encodeURIComponent('Olá! Gostaria de saber mais sobre os serviços de automação da Nexus.ai.')
+    
+    // Abre Gmail no navegador
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`
+    window.open(gmailLink, '_blank')
+    
+    // Também copia o email como backup
+    navigator.clipboard.writeText(email).then(() => {
+      toast({
+        title: "Gmail aberto!",
+        description: "O Gmail foi aberto no navegador e o email foi copiado como backup.",
+      })
+    }).catch(() => {
+      toast({
+        title: "Gmail aberto!",
+        description: "O Gmail foi aberto no navegador.",
+      })
+    })
   }
 
   const handleCalendlyClick = () => {
@@ -93,7 +113,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <div>
                     <CardTitle className="text-lg">Enviar Email</CardTitle>
                     <CardDescription className="text-sm">
-                      Envie suas dúvidas por email
+                      Abre o Gmail no navegador com tudo preenchido
                     </CardDescription>
                   </div>
                 </div>
