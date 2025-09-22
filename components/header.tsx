@@ -3,17 +3,18 @@
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
-import { ContactModal } from "@/components/contact-modal"
+import { useContact } from "@/contexts/contact-context"
+import Link from "next/link"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+  const { openContactModal } = useContact()
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md">
+    <header className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200">
             <div className="w-10 h-10 flex items-center justify-center">
               <img 
                 src="/Logo sem fundo.png" 
@@ -24,7 +25,7 @@ export function Header() {
             <span className="text-2xl font-bold text-foreground tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
               Nexus.ai
             </span>
-          </div>
+          </Link>
 
           <nav className="hidden md:flex items-center space-x-10">
             <a href="#servicos" className="font-medium text-base tracking-wider relative group">
@@ -41,10 +42,7 @@ export function Header() {
             </a>
             <Button 
               className="font-bold tracking-wide text-base px-6 py-3 bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-0"
-              onClick={() => {
-                console.log('Botão clicado, abrindo modal')
-                setIsContactModalOpen(true)
-              }}
+              onClick={openContactModal}
             >
               Agendar Conversa
             </Button>
@@ -76,7 +74,7 @@ export function Header() {
               </a>
               <Button 
                 className="w-full font-bold tracking-wide text-lg px-6 py-4 bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-0 mt-4"
-                onClick={() => setIsContactModalOpen(true)}
+                onClick={openContactModal}
               >
                 Agendar Conversa
               </Button>
@@ -84,11 +82,6 @@ export function Header() {
           </nav>
         )}
       </div>
-
-      <ContactModal 
-        isOpen={isContactModalOpen} 
-        onClose={() => setIsContactModalOpen(false)} 
-      />
     </header>
   )
 }

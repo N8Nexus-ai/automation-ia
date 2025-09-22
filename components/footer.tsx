@@ -82,14 +82,14 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>© 2025 Nexus.ai. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="/privacidade" className="hover:text-foreground transition-colors">
               Privacidade
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="/termos" className="hover:text-foreground transition-colors">
               Termos
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
-              Cookies
+            <a href="/sobre" className="hover:text-foreground transition-colors">
+              Sobre
             </a>
           </div>
         </div>

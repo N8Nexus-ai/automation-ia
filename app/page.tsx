@@ -8,6 +8,7 @@ import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import { AnimatedBackground } from "@/components/animated-background"
 import { DataFlow } from "@/components/data-flow"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 
 export default function HomePage() {
   return (
@@ -25,6 +26,8 @@ export default function HomePage() {
         <CTASection />
         <Footer />
       </div>
+      
+      <WhatsAppFloat />
     </main>
   )
 }

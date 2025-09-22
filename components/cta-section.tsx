@@ -1,13 +1,12 @@
 "use client"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Calendar, CheckCircle } from "lucide-react"
-import { ContactModal } from "@/components/contact-modal"
+import { useContact } from "@/contexts/contact-context"
 
 export function CTASection() {
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+  const { openContactModal } = useContact()
   
   const benefits = [
     "Análise gratuita dos seus processos",
@@ -48,7 +47,7 @@ export function CTASection() {
                 <Button 
                   size="lg" 
                   className="text-lg px-8 py-6"
-                  onClick={() => setIsContactModalOpen(true)}
+                  onClick={openContactModal}
                 >
                   Agendar Conversa Gratuita
                   <ArrowRight className="ml-2" size={20} />
@@ -62,11 +61,6 @@ export function CTASection() {
           </Card>
         </div>
       </div>
-
-      <ContactModal 
-        isOpen={isContactModalOpen} 
-        onClose={() => setIsContactModalOpen(false)} 
-      />
     </section>
   )
 }
