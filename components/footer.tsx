@@ -20,8 +20,7 @@ export function Footer() {
               Construímos automações e agentes de IA para liberar sua equipe e focar no crescimento do seu negócio.
             </p>
             <div className="text-sm text-muted-foreground">
-              <p>📧 contato@nexus.ai</p>
-              <p>📱 (11) 99999-9999</p>
+              <p>📧 contato@n8nexus.com.br</p>
             </div>
           </div>
 

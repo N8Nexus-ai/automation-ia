@@ -1,7 +1,13 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Zap, Clock, TrendingUp } from "lucide-react"
+import { ContactModal } from "@/components/contact-modal"
 
 export function HeroSection() {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+
   return (
     <section className="pt-32 pb-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
@@ -23,7 +29,11 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-6"
+              onClick={() => setIsContactModalOpen(true)}
+            >
               Agendar Conversa Gratuita
               <ArrowRight className="ml-2" size={20} />
             </Button>
@@ -59,6 +69,11 @@ export function HeroSection() {
           </div>
         </div>
       </div>
+
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </section>
   )
 }
