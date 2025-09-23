@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import remarkGfm from 'remark-gfm'
 
 const postsDirectory = path.join(process.cwd(), 'content/blog')
 
@@ -30,9 +31,10 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         const fileContents = fs.readFileSync(fullPath, 'utf8')
         const { data, content } = matter(fileContents)
 
-        // Convert MDX to HTML
+        // Convert MDX to HTML with proper formatting
         const processedContent = await remark()
-          .use(html)
+          .use(remarkGfm)
+          .use(html, { sanitize: false })
           .process(content)
         const contentHtml = processedContent.toString()
 
@@ -53,9 +55,10 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
-    // Convert MDX to HTML
+    // Convert MDX to HTML with proper formatting
     const processedContent = await remark()
-      .use(html)
+      .use(remarkGfm)
+      .use(html, { sanitize: false })
       .process(content)
     const contentHtml = processedContent.toString()
 
