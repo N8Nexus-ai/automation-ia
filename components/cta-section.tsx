@@ -49,7 +49,7 @@ export function CTASection() {
                   className="text-lg px-8 py-6"
                   onClick={openContactModal}
                 >
-                  Agendar Conversa Gratuita
+                  Agendar Reunião
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </div>

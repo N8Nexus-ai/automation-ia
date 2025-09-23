@@ -108,7 +108,7 @@ export default function SobrePage() {
 
           {/* Tecnologias */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-12 text-gray-900">Tecnologias que Dominamos</h2>
+            <h2 className="text-2xl font-bold text-center mb-12 text-gray-800">Tecnologias que Dominamos</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 "n8n Workflow Automation",
@@ -120,8 +120,8 @@ export default function SobrePage() {
                 "APIs & Integrações",
                 "Bancos de Dados"
               ].map((tech, index) => (
-                <div key={index} className="bg-card border rounded-lg p-4 text-center">
-                  <div className="text-sm font-medium text-gray-700">
+                <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                  <div className="text-sm font-semibold">
                     {tech}
                   </div>
                 </div>
@@ -133,15 +133,15 @@ export default function SobrePage() {
           <section className="text-center">
             <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold mb-4 text-gray-900">
+                <h3 className="text-xl font-bold mb-4">
                   Pronto para transformar seu negócio?
                 </h3>
-                <p className="text-gray-700 mb-6">
+                <p className="text-muted-foreground mb-6">
                   Vamos conversar sobre como podemos automatizar seus processos e acelerar seu crescimento.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button onClick={openContactModal} size="lg" className="px-8 py-4 text-lg">
-                    Agendar Conversa Gratuita
+                    Agendar Reunião
                   </Button>
                 </div>
               </CardContent>

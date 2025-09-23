@@ -269,7 +269,7 @@ export default function AutomacaoProcessosPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button onClick={openContactModal} size="lg" className="px-8 py-4 text-lg">
-              Agendar Conversa Gratuita
+              Agendar Reunião
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg">
