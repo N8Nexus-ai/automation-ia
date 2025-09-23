@@ -95,7 +95,7 @@ export default function InfraestruturaN8nPage() {
                 </div>
 
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary mb-2">A partir de R$ 2.500/mês</div>
+                  <div className="text-2xl font-bold text-primary mb-2">Sob consulta</div>
                   <div className="text-sm text-muted-foreground">Inclui instalação, configuração e suporte</div>
                 </div>
               </CardContent>
@@ -150,7 +150,7 @@ export default function InfraestruturaN8nPage() {
                 </div>
 
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-accent mb-2">A partir de R$ 1.500/mês</div>
+                  <div className="text-2xl font-bold text-accent mb-2">Sob consulta</div>
                   <div className="text-sm text-muted-foreground">Inclui infraestrutura, manutenção e suporte</div>
                 </div>
               </CardContent>
@@ -175,14 +175,14 @@ export default function InfraestruturaN8nPage() {
             <table className="w-full bg-white rounded-2xl shadow-xl border border-border/50">
               <thead>
                 <tr className="border-b border-border/50">
-                  <th className="text-left p-6 font-bold text-lg">Recurso</th>
+                  <th className="text-center p-6 font-bold text-lg text-gray-800">Recurso</th>
                   <th className="text-center p-6 font-bold text-lg text-primary">Sua Instância</th>
                   <th className="text-center p-6 font-bold text-lg text-accent">Gerenciada</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-border/30">
-                  <td className="p-6 font-medium">Controle de Dados</td>
+                  <td className="p-6 font-medium text-muted-foreground text-center">Controle de Dados</td>
                   <td className="p-6 text-center">
                     <CheckCircle className="w-6 h-6 text-primary mx-auto" />
                   </td>
@@ -191,7 +191,7 @@ export default function InfraestruturaN8nPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-border/30">
-                  <td className="p-6 font-medium">Customização</td>
+                  <td className="p-6 font-medium text-muted-foreground text-center">Customização</td>
                   <td className="p-6 text-center">
                     <CheckCircle className="w-6 h-6 text-primary mx-auto" />
                   </td>
@@ -200,7 +200,7 @@ export default function InfraestruturaN8nPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-border/30">
-                  <td className="p-6 font-medium">Manutenção</td>
+                  <td className="p-6 font-medium text-muted-foreground text-center">Manutenção</td>
                   <td className="p-6 text-center">
                     <span className="text-muted-foreground">Sua responsabilidade</span>
                   </td>
@@ -209,7 +209,7 @@ export default function InfraestruturaN8nPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-border/30">
-                  <td className="p-6 font-medium">Backup Automático</td>
+                  <td className="p-6 font-medium text-muted-foreground text-center">Backup Automático</td>
                   <td className="p-6 text-center">
                     <span className="text-muted-foreground">Configurável</span>
                   </td>
@@ -218,7 +218,7 @@ export default function InfraestruturaN8nPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-border/30">
-                  <td className="p-6 font-medium">Monitoramento 24/7</td>
+                  <td className="p-6 font-medium text-muted-foreground text-center">Monitoramento 24/7</td>
                   <td className="p-6 text-center">
                     <span className="text-muted-foreground">Opcional</span>
                   </td>
@@ -227,7 +227,7 @@ export default function InfraestruturaN8nPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-border/30">
-                  <td className="p-6 font-medium">Atualizações</td>
+                  <td className="p-6 font-medium text-muted-foreground text-center">Atualizações</td>
                   <td className="p-6 text-center">
                     <span className="text-muted-foreground">Manuais</span>
                   </td>
@@ -236,7 +236,7 @@ export default function InfraestruturaN8nPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-border/30">
-                  <td className="p-6 font-medium">Suporte Técnico</td>
+                  <td className="p-6 font-medium text-muted-foreground text-center">Suporte Técnico</td>
                   <td className="p-6 text-center">
                     <span className="text-muted-foreground">Básico</span>
                   </td>
@@ -245,7 +245,7 @@ export default function InfraestruturaN8nPage() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium">Custo Inicial</td>
+                  <td className="p-6 font-medium text-muted-foreground text-center">Custo Inicial</td>
                   <td className="p-6 text-center">
                     <span className="text-primary font-bold">Alto</span>
                   </td>
@@ -327,7 +327,7 @@ export default function InfraestruturaN8nPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button onClick={openContactModal} size="lg" className="px-8 py-4 text-lg">
-              Agendar Conversa Gratuita
+              Agendar Reunião
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg">
