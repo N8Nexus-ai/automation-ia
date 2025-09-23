@@ -46,7 +46,7 @@ export default function AutomacaoProcessosPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 animate-fade-in-up">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Settings className="w-8 h-8 text-white" />
@@ -78,7 +78,7 @@ export default function AutomacaoProcessosPage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-8 h-8 text-white" />
@@ -110,7 +110,7 @@ export default function AutomacaoProcessosPage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <BarChart3 className="w-8 h-8 text-white" />
@@ -164,7 +164,8 @@ export default function AutomacaoProcessosPage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Economia de Tempo</h3>
               <p className="text-muted-foreground">
-                Reduza em até <strong>99%</strong> o tempo gasto em tarefas repetitivas
+                Reduza em até <strong>99%</strong> o tempo gasto em tarefas repetitivas. 
+                <br />Economia média: <strong>40h/semana</strong>
               </p>
             </div>
 
@@ -195,6 +196,7 @@ export default function AutomacaoProcessosPage() {
               <h3 className="text-xl font-bold mb-4">ROI Comprovado</h3>
               <p className="text-muted-foreground">
                 Retorno do investimento em <strong>menos de 3 meses</strong>
+                <br />ROI médio: <strong>300% no primeiro ano</strong>
               </p>
             </div>
           </div>
@@ -257,19 +259,89 @@ export default function AutomacaoProcessosPage() {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              Casos de Uso Reais
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Veja como outras empresas transformaram seus processos com nossa automação
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                    <BarChart3 className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">E-commerce</h3>
+                    <p className="text-muted-foreground">Automação de pedidos</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  <strong>Problema:</strong> Processamento manual de 500+ pedidos/dia
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  <strong>Solução:</strong> Automação completa do fluxo de pedidos
+                </p>
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full">99% redução</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent rounded-full">2h → 2min</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">Consultoria</h3>
+                    <p className="text-muted-foreground">Gestão de leads</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  <strong>Problema:</strong> Qualificação manual de 200+ leads/semana
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  <strong>Solução:</strong> Sistema inteligente de qualificação
+                </p>
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full">85% eficiência</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent rounded-full">24/7 ativo</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
             Pronto para Automatizar Seus Processos?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
             Agende uma conversa gratuita e descubra quais processos da sua empresa 
             podem ser automatizados para gerar mais eficiência e economia.
           </p>
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-6 mb-8">
+            <p className="text-lg font-semibold text-primary mb-2">🚀 Oferta Especial</p>
+            <p className="text-muted-foreground">
+              Consultoria gratuita de 30 minutos + Análise completa dos seus processos
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button onClick={openContactModal} size="lg" className="px-8 py-4 text-lg">
-              Agendar Reunião
+            <Button onClick={openContactModal} size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90">
+              Agendar Consultoria Gratuita
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg">
