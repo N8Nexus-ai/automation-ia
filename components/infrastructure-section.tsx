@@ -1,8 +1,12 @@
+"use client"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Server, Cloud, Shield, Zap, CheckCircle } from "lucide-react"
+import { useContact } from "@/contexts/contact-context"
 
 export function InfrastructureSection() {
+  const { openContactModal } = useContact()
   const options = [
     {
       icon: Server,
@@ -149,7 +153,7 @@ export function InfrastructureSection() {
           <p className="text-muted-foreground mb-4">
             Não tem certeza qual opção escolher?
           </p>
-          <Button variant="outline" size="lg">
+          <Button variant="outline" size="lg" onClick={openContactModal}>
             Falar com Especialista
           </Button>
         </div>

@@ -6,15 +6,25 @@ import { useContact } from "@/contexts/contact-context"
 
 export function WhatsAppFloat() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isNearBottom, setIsNearBottom] = useState(false)
   const { openContactModal } = useContact()
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      const scrollTop = window.pageYOffset
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+      
+      // Mostra o botão após 300px de scroll
+      if (scrollTop > 300) {
         setIsVisible(true)
       } else {
         setIsVisible(false)
       }
+      
+      // Detecta se está próximo do final da página (últimos 200px)
+      const distanceFromBottom = documentHeight - (scrollTop + windowHeight)
+      setIsNearBottom(distanceFromBottom < 200)
     }
 
     window.addEventListener('scroll', toggleVisibility)
@@ -36,7 +46,7 @@ export function WhatsAppFloat() {
 
   return (
     <>
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className={`fixed right-6 z-30 transition-all duration-300 ${isNearBottom ? 'bottom-32' : 'bottom-6'}`}>
         {hasWhatsApp ? (
           <a
             href={whatsappUrl}
