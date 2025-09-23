@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { ContactProvider } from "@/contexts/contact-context"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -56,8 +57,10 @@ export default function RootLayout({
         {/* Favicon tags removidas - usando apenas os metadados do Next.js */}
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+        <ContactProvider>
+          <Suspense fallback={null}>{children}</Suspense>
+          <Analytics />
+        </ContactProvider>
       </body>
     </html>
   )

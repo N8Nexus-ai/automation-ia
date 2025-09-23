@@ -3,15 +3,18 @@
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { useContact } from "@/contexts/contact-context"
+import Link from "next/link"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { openContactModal } = useContact()
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md">
+    <header className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200">
             <div className="w-10 h-10 flex items-center justify-center">
               <img 
                 src="/Logo sem fundo.png" 
@@ -22,7 +25,7 @@ export function Header() {
             <span className="text-2xl font-bold text-foreground tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
               Nexus.ai
             </span>
-          </div>
+          </Link>
 
           <nav className="hidden md:flex items-center space-x-10">
             <a href="#servicos" className="font-medium text-base tracking-wider relative group">
@@ -37,7 +40,10 @@ export function Header() {
               <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent hover:from-primary hover:to-indigo-400 transition-all duration-300">Resultados</span>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-indigo-400 transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <Button className="font-bold tracking-wide text-base px-6 py-3 bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-0">
+            <Button 
+              className="font-bold tracking-wide text-base px-6 py-3 bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-0"
+              onClick={openContactModal}
+            >
               Agendar Conversa
             </Button>
           </nav>
@@ -66,7 +72,10 @@ export function Header() {
                 <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent hover:from-primary hover:to-indigo-400 transition-all duration-300 relative z-10">Resultados</span>
                 <div className="absolute left-0 top-0 w-0 h-full bg-primary/10 transition-all duration-300 group-hover:w-full rounded-md"></div>
               </a>
-              <Button className="w-full font-bold tracking-wide text-lg px-6 py-4 bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-0 mt-4">
+              <Button 
+                className="w-full font-bold tracking-wide text-lg px-6 py-4 bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-0 mt-4"
+                onClick={openContactModal}
+              >
                 Agendar Conversa
               </Button>
             </div>
