@@ -37,10 +37,6 @@ export function StatsSection() {
             <div className="text-3xl font-bold text-primary mb-2">25+</div>
             <div className="text-muted-foreground">Empresas Atendidas</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-accent mb-2">98%</div>
-            <div className="text-muted-foreground">Satisfação dos Clientes</div>
-          </div>
         </div>
       </div>
     </section>

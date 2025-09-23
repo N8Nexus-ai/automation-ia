@@ -37,7 +37,7 @@ export function ServicesSection() {
       icon: Users,
       title: "Gestão de Clientes",
       description: "Automatize o relacionamento com clientes desde o primeiro contato até o pós-venda.",
-      features: ["CRM automatizado", "Follow-up inteligente", "Análise de satisfação"],
+      features: ["CRM automatizado", "Follow-up inteligente", "Relatórios detalhados"],
     },
     {
       icon: Cloud,

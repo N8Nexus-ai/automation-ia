@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ContactProvider } from "@/contexts/contact-context"
+import { ContactModal } from "@/components/contact-modal"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -59,6 +60,7 @@ export default function RootLayout({
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ContactProvider>
           <Suspense fallback={null}>{children}</Suspense>
+          <ContactModal />
           <Analytics />
         </ContactProvider>
       </body>
