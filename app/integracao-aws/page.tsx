@@ -16,9 +16,9 @@ export default function IntegracaoAwsPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-20 px-4 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10">
+      <section className="pt-24 pb-8 px-4 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-0">
             <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20 mb-6">
               Nossos Serviços
             </Badge>
@@ -34,7 +34,7 @@ export default function IntegracaoAwsPage() {
       </section>
 
       {/* AWS Services */}
-      <section className="py-20 px-4">
+      <section className="pt-8 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">

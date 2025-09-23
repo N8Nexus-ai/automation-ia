@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ContactProvider } from "@/contexts/contact-context"
 import { ContactModal } from "@/components/contact-modal"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -61,6 +62,7 @@ export default function RootLayout({
         <ContactProvider>
           <Suspense fallback={null}>{children}</Suspense>
           <ContactModal />
+          <WhatsAppFloat />
           <Analytics />
         </ContactProvider>
       </body>
