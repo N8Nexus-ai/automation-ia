@@ -1,67 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/</loc>
+    <loc>https://n8nexus.com.br/</loc>
     <lastmod>2025-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>/sobre</loc>
+    <loc>https://n8nexus.com.br/sobre</loc>
     <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>/termos</loc>
+    <loc>https://n8nexus.com.br/servicos</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://n8nexus.com.br/automacao-processos</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://n8nexus.com.br/integracao-aws</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://n8nexus.com.br/infraestrutura-n8n</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://n8nexus.com.br/termos</loc>
     <lastmod>2025-01-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>/privacidade</loc>
+    <loc>https://n8nexus.com.br/privacidade</loc>
     <lastmod>2025-01-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>/blog</loc>
+    <loc>https://n8nexus.com.br/blog</loc>
     <lastmod>2025-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/blog/como-automacao-pode-revolucionar-seu-negocio</loc>
+    <loc>https://n8nexus.com.br/blog/como-automacao-pode-revolucionar-seu-negocio</loc>
     <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/blog/ia-generativa-para-empresas</loc>
+    <loc>https://n8nexus.com.br/blog/ia-generativa-para-empresas</loc>
     <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/blog/integracao-aws-n8n</loc>
+    <loc>https://n8nexus.com.br/blog/integracao-aws-para-automacao</loc>
     <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/blog/chatbots-inteligentes</loc>
+    <loc>https://n8nexus.com.br/blog/chatbots-ia-atendimento-cliente</loc>
     <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/blog/automatizacao-processos</loc>
+    <loc>https://n8nexus.com.br/blog/n8n-vs-zapier-qual-escolher</loc>
     <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/blog/roi-automacao-empresarial</loc>
+    <loc>https://n8nexus.com.br/blog/roi-automacao-processos</loc>
     <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

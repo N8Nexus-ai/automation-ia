@@ -5,13 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Video, Calendar, ArrowRight, Copy, Check } from "lucide-react"
 import { toast } from "@/hooks/use-toast"
+import { useContact } from "@/contexts/contact-context"
 
-interface ContactModalProps {
-  isOpen: boolean
-  onClose: () => void
-}
-
-export function ContactModal({ isOpen, onClose }: ContactModalProps) {
+export function ContactModal() {
+  const { isContactModalOpen, closeContactModal } = useContact()
   const [copiedEmail, setCopiedEmail] = useState(false)
   const [copiedMeet, setCopiedMeet] = useState(false)
 
@@ -82,13 +79,13 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     window.open(calendlyLink, "_blank")
   }
 
-  if (!isOpen) return null
+  if (!isContactModalOpen) return null
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 pt-20">
       <div 
         className="fixed inset-0 bg-black/50" 
-        onClick={onClose}
+        onClick={closeContactModal}
       />
       <div className="relative bg-background rounded-lg shadow-lg max-w-md w-full max-h-[80vh] overflow-y-auto border border-border">
         <div className="p-6">
@@ -186,7 +183,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         </div>
 
           <div className="flex justify-center mt-6">
-            <Button variant="outline" onClick={onClose}>
+            <Button variant="outline" onClick={closeContactModal}>
               Fechar
             </Button>
           </div>
