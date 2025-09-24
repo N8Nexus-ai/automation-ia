@@ -64,7 +64,7 @@ export function FooterLight() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-900 transition-colors">
+                <a href="/contato" className="hover:text-gray-900 transition-colors">
                   Contato
                 </a>
               </li>
