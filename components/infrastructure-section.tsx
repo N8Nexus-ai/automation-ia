@@ -141,6 +141,7 @@ export function InfrastructureSection() {
                   className="w-full" 
                   variant={option.variant}
                   size="lg"
+                  onClick={openContactModal}
                 >
                   {option.buttonText}
                 </Button>

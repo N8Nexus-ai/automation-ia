@@ -28,12 +28,12 @@ export default async function BlogPage() {
 
           {/* CTA Section */}
           <div className="mt-16">
-            <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-bold mb-4 text-gray-900">
+                <h3 className="text-xl font-bold mb-4 text-gray-300">
                   Quer automatizar seus processos?
                 </h3>
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-400 mb-6">
                   Entre em contato conosco e descubra como podemos revolucionar seu negócio com automação inteligente.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -41,7 +41,7 @@ export default async function BlogPage() {
                     href="mailto:contato@n8nexus.com.br?subject=Contato via Blog Nexus.ai&body=Olá! Gostaria de saber mais sobre os serviços de automação da Nexus.ai."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-semibold"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-semibold"
                   >
                     Enviar Email
                   </a>
@@ -49,7 +49,7 @@ export default async function BlogPage() {
                     href="https://wa.me/5511990099690?text=Olá! Gostaria de saber mais sobre os serviços de automação da Nexus.ai."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-semibold"
                   >
                     WhatsApp
                   </a>
