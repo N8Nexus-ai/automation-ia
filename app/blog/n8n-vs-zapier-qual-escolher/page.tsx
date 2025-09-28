@@ -1,15 +1,15 @@
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { FooterLight } from "@/components/footer-light"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
 export default function ArticlePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       <Header />
       
-      <div className="pt-24 pb-20 px-4">
+      <div className="pt-24 pb-20 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
           {/* Back Button */}
           <Link 
@@ -25,7 +25,7 @@ export default function ArticlePage() {
             <div className="flex items-center gap-2 mb-4">
               <Badge variant="secondary">Tecnologia</Badge>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-2xl md:text-3xl font-bold mb-6">
               n8n vs Zapier: Qual Escolher para Sua Empresa?
             </h1>
             <div className="flex items-center gap-6 text-muted-foreground mb-6">
@@ -38,7 +38,7 @@ export default function ArticlePage() {
                 7 min de leitura
               </div>
             </div>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base text-gray-700">
               Comparação detalhada entre as duas principais plataformas de automação e quando usar cada uma.
             </p>
           </div>
@@ -148,18 +148,28 @@ export default function ArticlePage() {
 
           {/* CTA */}
           <div className="mt-12 p-8 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg border border-primary/20">
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-xl font-bold mb-4">
               Precisa de ajuda para escolher?
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-gray-600 mb-6">
               Nossa equipe pode ajudar você a escolher a melhor plataforma para suas necessidades.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="mailto:contato@n8nexus.com.br"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                href="mailto:contato@n8nexus.com.br?subject=Contato via Blog Nexus.ai&body=Olá! Gostaria de saber mais sobre os serviços de automação da Nexus.ai."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
               >
-                Entrar em Contato
+                Enviar Email
+              </a>
+              <a 
+                href="https://wa.me/5511990099690?text=Olá! Gostaria de saber mais sobre os serviços de automação da Nexus.ai."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              >
+                WhatsApp
               </a>
               <a 
                 href="https://calendly.com/marco-florencio100/30min"
@@ -174,7 +184,7 @@ export default function ArticlePage() {
         </div>
       </div>
       
-      <Footer />
+      <FooterLight />
     </main>
   )
 }

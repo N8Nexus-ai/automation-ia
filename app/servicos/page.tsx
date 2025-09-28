@@ -151,19 +151,19 @@ export default function ServicosPage() {
                     </div>
                     <div className="flex justify-between">
                       <span>Infraestrutura AWS:</span>
-                      <span className="font-bold">R$ 800</span>
+                      <span className="font-bold">R$ 100 - 400</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Manutenção:</span>
-                      <span className="font-bold">R$ 1.200</span>
+                      <span className="font-bold">R$ 250</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Atualizações:</span>
-                      <span className="font-bold">R$ 500</span>
-                    </div>
+                    {/* <div className="flex justify-between">
+                      <span>Implementações futuras:</span>
+                      <span className="font-bold">R$ 200 - 1000</span>
+                    </div> */}
                     <div className="flex justify-between border-t pt-2 font-bold text-lg">
                       <span>Total Mensal:</span>
-                      <span className="text-green-600">R$ 2.500</span>
+                      <span className="text-green-600">R$ 1.100</span>
                     </div>
                   </div>
                 </div>

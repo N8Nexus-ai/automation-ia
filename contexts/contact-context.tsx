@@ -20,10 +20,7 @@ export function ContactProvider({ children }: { children: ReactNode }) {
   return (
     <ContactContext.Provider value={{ isContactModalOpen, openContactModal, closeContactModal }}>
       {children}
-      <ContactModal 
-        isOpen={isContactModalOpen} 
-        onClose={closeContactModal} 
-      />
+      <ContactModal />
     </ContactContext.Provider>
   )
 }

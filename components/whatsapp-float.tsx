@@ -1,6 +1,6 @@
 "use client"
 
-import { MessageCircle } from "lucide-react"
+import { MessageCircle, Calendar } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useContact } from "@/contexts/contact-context"
 
@@ -42,11 +42,32 @@ export function WhatsAppFloat() {
     ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
     : "#" // Fallback para modal de contato
 
+  // Link do Calendly
+  const calendlyLink = "https://calendly.com/marco-florencio100/30min"
+
   if (!isVisible) return null
 
   return (
     <>
-      <div className={`fixed right-6 z-30 transition-all duration-300 ${isNearBottom ? 'bottom-32' : 'bottom-6'}`}>
+      <div className={`fixed right-6 z-30 transition-all duration-300 flex flex-col gap-3 ${isNearBottom ? 'bottom-32' : 'bottom-6'}`}>
+        {/* Botão Agendar Reunião */}
+        <a
+          href={calendlyLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+          aria-label="Agendar Reunião"
+        >
+          <Calendar className="text-white" size={28} />
+          
+          {/* Tooltip */}
+          <div className="absolute right-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            Agendar Reunião
+            <div className="absolute right-0 top-1/2 transform translate-x-1 -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-900 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+          </div>
+        </a>
+
+        {/* Botão WhatsApp */}
         {hasWhatsApp ? (
           <a
             href={whatsappUrl}

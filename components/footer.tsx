@@ -54,17 +54,12 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Empresa</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="/sobre" className="hover:text-foreground transition-colors">
                   Sobre Nós
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="/contato" className="hover:text-foreground transition-colors">
                   Contato
                 </a>
               </li>
