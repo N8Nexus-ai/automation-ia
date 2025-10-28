@@ -36,6 +36,10 @@ export function Header() {
               <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent hover:from-primary hover:to-indigo-400 transition-all duration-300">Como Funciona</span>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-indigo-400 transition-all duration-300 group-hover:w-full"></div>
             </a>
+            <Link href="/blog" className="font-medium text-base tracking-wider relative group">
+              <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent hover:from-primary hover:to-indigo-400 transition-all duration-300">Blog</span>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-indigo-400 transition-all duration-300 group-hover:w-full"></div>
+            </Link>
             <Link href="/sobre" className="font-medium text-base tracking-wider relative group">
               <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent hover:from-primary hover:to-indigo-400 transition-all duration-300">Sobre Nós</span>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-indigo-400 transition-all duration-300 group-hover:w-full"></div>
@@ -68,6 +72,10 @@ export function Header() {
                 <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent hover:from-primary hover:to-indigo-400 transition-all duration-300 relative z-10">Como Funciona</span>
                 <div className="absolute left-0 top-0 w-0 h-full bg-primary/10 transition-all duration-300 group-hover:w-full rounded-md"></div>
               </a>
+              <Link href="/blog" className="font-medium text-lg tracking-wider py-3 relative group">
+                <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent hover:from-primary hover:to-indigo-400 transition-all duration-300 relative z-10">Blog</span>
+                <div className="absolute left-0 top-0 w-0 h-full bg-primary/10 transition-all duration-300 group-hover:w-full rounded-md"></div>
+              </Link>
               <Link href="/sobre" className="font-medium text-lg tracking-wider py-3 relative group">
                 <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent hover:from-primary hover:to-indigo-400 transition-all duration-300 relative z-10">Sobre Nós</span>
                 <div className="absolute left-0 top-0 w-0 h-full bg-primary/10 transition-all duration-300 group-hover:w-full rounded-md"></div>
