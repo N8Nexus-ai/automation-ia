@@ -172,7 +172,7 @@ export default function ArticlePage() {
                 WhatsApp
               </a>
               <a 
-                href="https://calendly.com/marco-florencio100/30min"
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1HGUchFoPVeHUZH3bCBT8HsbGy1DP78DYOKmrtWTLP5SS4dVGvcmVJ8T4IYrUZshKy8Jd7Hml-"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors"

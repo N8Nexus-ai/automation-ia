@@ -43,7 +43,7 @@ export function WhatsAppFloat() {
     : "#" // Fallback para modal de contato
 
   // Link do Calendly
-  const calendlyLink = "https://calendly.com/marco-florencio100/30min"
+  const calendlyLink = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1HGUchFoPVeHUZH3bCBT8HsbGy1DP78DYOKmrtWTLP5SS4dVGvcmVJ8T4IYrUZshKy8Jd7Hml-"
 
   if (!isVisible) return null
 

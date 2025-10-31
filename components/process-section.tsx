@@ -7,7 +7,7 @@ export function ProcessSection() {
       icon: MessageCircle,
       title: "Conversa Inicial",
       description: "Entendemos sua dor, processos manuais e resultados esperados em uma reunião gratuita.",
-      duration: "30 min",
+      duration: "15 min",
     },
     {
       icon: Search,
