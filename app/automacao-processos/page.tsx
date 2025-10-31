@@ -336,7 +336,7 @@ export default function AutomacaoProcessosPage() {
           <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-4 md:p-6 mb-6 md:mb-8 mx-4">
             <p className="text-base md:text-lg font-semibold text-primary mb-2">🚀 Oferta Especial</p>
             <p className="text-sm md:text-base text-muted-foreground">
-              Consultoria gratuita de 30 minutos + Análise completa dos seus processos
+              Consultoria gratuita de 15 minutos + Análise completa dos seus processos
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
