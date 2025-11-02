@@ -33,6 +33,12 @@
     Content-Type = "application/xml"
     Cache-Control = "public, max-age=3600"
 
+[[headers]]
+  for = "/BingSiteAuth.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+    Cache-Control = "public, max-age=0"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
