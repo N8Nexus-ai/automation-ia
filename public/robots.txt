@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://nexus.ai/sitemap.xml
+Sitemap: https://n8nexus.com.br/sitemap.xml
 
 # Disallow admin areas (if any)
 Disallow: /admin/
