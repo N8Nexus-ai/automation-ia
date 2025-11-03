@@ -9,25 +9,29 @@ import { WhatsAppFloat } from "@/components/whatsapp-float"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Nexus.ai - Consultoria em Automação e IA",
+  title: "Nexus.ai - Arquiteto de Soluções Completas | Plataformas Ponta-a-Ponta",
   description:
-    "Transformamos tarefas repetitivas em automações inteligentes. Economize 99,3% do tempo da sua equipe com nossas soluções de IA.",
+    "Mais que automação: arquitetamos e construímos plataformas completas ponta-a-ponta. Do Back-end (APIs e Banco de Dados) ao Painel de Controle visual, criamos soluções que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
   generator: "v0.app",
   keywords: [
-    "automação de processos", 
-    "inteligência artificial", 
-    "IA para empresas",
-    "consultoria em automação", 
-    "nexus", 
-    "n8n",
-    "automação inteligente",
-    "chatbots",
-    "RPA",
+    "arquitetura de soluções",
+    "plataformas sob medida",
+    "automação ponta-a-ponta",
+    "API e Banco de Dados",
+    "painel de controle visual",
+    "soluções completas",
     "integração de sistemas",
+    "orquestração n8n",
+    "infraestrutura flexível",
+    "automação de processos",
+    "inteligência artificial",
+    "IA para empresas",
+    "consultoria em automação",
+    "nexus",
+    "n8n",
     "transformação digital",
     "eficência operacional",
-    "redução de custos",
-    "automação com IA"
+    "redução de custos"
   ],
   authors: [{ name: "Nexus.ai" }],
   creator: "Nexus.ai",
@@ -39,8 +43,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://n8nexus.com.br'),
   openGraph: {
-    title: "Nexus.ai - Consultoria em Automação e IA",
-    description: "Transformamos tarefas repetitivas em automações inteligentes. Economize 99,3% do tempo da sua equipe com nossas soluções de IA.",
+    title: "Nexus.ai - Arquiteto de Soluções Completas | Plataformas Ponta-a-Ponta",
+    description: "Mais que automação: arquitetamos e construímos plataformas completas ponta-a-ponta. Do Back-end (APIs e Banco de Dados) ao Painel de Controle visual, criamos soluções que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
     url: 'https://n8nexus.com.br',
     siteName: 'Nexus.ai',
     images: [
@@ -48,7 +52,7 @@ export const metadata: Metadata = {
         url: 'https://n8nexus.com.br/Logo sem fundo.png',
         width: 1200,
         height: 630,
-        alt: 'Nexus.ai - Consultoria em Automação e IA',
+        alt: 'Nexus.ai - Arquiteto de Soluções Completas',
       },
     ],
     locale: 'pt_BR',
@@ -56,8 +60,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Nexus.ai - Consultoria em Automação e IA",
-    description: "Transformamos tarefas repetitivas em automações inteligentes. Economize 99,3% do tempo da sua equipe com nossas soluções de IA.",
+    title: "Nexus.ai - Arquiteto de Soluções Completas | Plataformas Ponta-a-Ponta",
+    description: "Mais que automação: arquitetamos e construímos plataformas completas ponta-a-ponta. Do Back-end (APIs e Banco de Dados) ao Painel de Controle visual, criamos soluções que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
     images: ['https://n8nexus.com.br/Logo sem fundo.png'],
   },
 }
@@ -74,7 +78,7 @@ export default function RootLayout({
     "alternateName": "N8Nexus",
     "url": "https://n8nexus.com.br",
     "logo": "https://n8nexus.com.br/Logo sem fundo.png",
-    "description": "Transformamos tarefas repetitivas em automações inteligentes. Consultoria em automação de processos e inteligência artificial.",
+    "description": "Arquiteto de Soluções Completas. Projetamos e construímos plataformas ponta-a-ponta: do Back-end (APIs e Banco de Dados) ao Painel de Controle visual, criando soluções que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
     "email": "contato@n8nexus.com.br",
     "address": {
       "@type": "PostalAddress",
@@ -91,7 +95,7 @@ export default function RootLayout({
     "@type": "WebSite",
     "name": "Nexus.ai - Consultoria em Automação e IA",
     "url": "https://n8nexus.com.br",
-    "description": "Transformamos tarefas repetitivas em automações inteligentes. Economize 99,3% do tempo da sua equipe com nossas soluções de IA.",
+    "description": "Mais que automação: arquitetamos e construímos plataformas completas ponta-a-ponta. Do Back-end (APIs e PostgreSQL) ao Front-end (Next.js), criamos painéis de controle que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://n8nexus.com.br/blog?q={search_term_string}",

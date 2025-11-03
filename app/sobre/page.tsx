@@ -13,17 +13,17 @@ export default function SobrePage() {
     {
       icon: Target,
       title: "Missão",
-      description: "Democratizar a automação de processos através de soluções de IA acessíveis e eficientes, liberando o potencial humano para atividades estratégicas."
+      description: "Desenhar e construir a solução exata que o cliente precisa para automatizar processos, eliminando erros manuais e otimizando custos e tempo."
     },
     {
       icon: Zap,
       title: "Visão",
-      description: "Ser a referência em automação inteligente no Brasil, transformando a forma como empresas operam e crescem através da tecnologia."
+      description: "Ser reconhecido como parceiro estratégico que oferece desde automações simples até plataformas completas, resolvendo desafios de negócio com tecnologia adequada ao que cada cliente precisa."
     },
     {
       icon: Award,
       title: "Valores",
-      description: "Inovação, transparência, excelência técnica e foco no cliente. Acreditamos que a tecnologia deve servir ao ser humano, não o contrário."
+      description: "Arquitetura primeiro, flexibilidade total, impacto mensurável. Resolvemos o problema de negócio — a tecnologia é o meio, não o fim."
     }
   ]
 
@@ -40,7 +40,9 @@ export default function SobrePage() {
               Sobre a <span className="text-primary">Nexus.ai</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Somos especialistas em automação inteligente, transformando processos complexos em soluções simples e eficientes através da IA.
+              Lideramos a Arquitetura e o desenvolvimento de Automações. Nossa missão é desenhar e construir 
+              a solução exata que o cliente precisa — desde automações simples até plataformas completas ponta-a-ponta. 
+              Você escolhe o escopo; nós entregamos o resultado.
             </p>
           </div>
 
@@ -48,19 +50,25 @@ export default function SobrePage() {
           <section className="mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-2xl font-bold mb-6 text-gray-900">Nossa História</h2>
+                <h2 className="text-2xl font-bold mb-6 text-gray-900">Do Simples ao Completo</h2>
                 <div className="space-y-4 text-gray-700">
                   <p>
-                    A Nexus.ai nasceu da visão de que a automação não deveria ser um privilégio de grandes corporações. 
-                    Fundada em 2024, nossa missão é democratizar o acesso a soluções de IA e automação.
+                    A Nexus.ai oferece <strong>flexibilidade total</strong>. Você pode escolher apenas uma automação 
+                    simples para conectar sistemas, ou uma solução completa ponta-a-ponta com API, Banco de Dados e 
+                    Painel de Controle visual. O importante é resolver seu desafio de negócio.
                   </p>
                   <p>
-                    Com expertise em n8n, AWS e tecnologias de ponta, desenvolvemos soluções personalizadas que 
-                    transformam a forma como empresas operam, liberando tempo e recursos para o que realmente importa.
+                    <strong>Automação Simples:</strong> Workflows n8n que conectam seus sistemas e eliminam trabalho manual. 
+                    Ideal para quem precisa de automação rápida e direta.
                   </p>
                   <p>
-                    Acreditamos que a tecnologia deve servir ao ser humano, não o contrário. Por isso, 
-                    criamos automações que são intuitivas, eficientes e verdadeiramente úteis.
+                    <strong>Plataforma Completa:</strong> Para empresas que precisam de mais, construímos a solução completa 
+                    ponta-a-ponta: Back-end (APIs e Banco de Dados), orquestrador (n8n) e Painel de Controle visual. 
+                    Permite que equipes não-técnicas gerenciem processos complexos com um clique.
+                  </p>
+                  <p>
+                    Você escolhe: apenas automação ou plataforma completa. Integramos à sua infraestrutura interna ou 
+                    cuidamos de toda a hospedagem e gerenciamento. Flexibilidade total, resultado garantido.
                   </p>
                 </div>
               </div>
@@ -77,6 +85,10 @@ export default function SobrePage() {
                   <div>
                     <div className="text-3xl font-bold text-primary mb-2">24/7</div>
                     <div className="text-gray-700">Suporte Disponível</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-primary mb-2">100%</div>
+                    <div className="text-gray-700">Ponta-a-Ponta</div>
                   </div>
                 </div>
               </div>
@@ -108,17 +120,17 @@ export default function SobrePage() {
 
           {/* Tecnologias */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-12 text-gray-800">Tecnologias que Dominamos</h2>
+            <h2 className="text-2xl font-bold text-center mb-12 text-gray-800">Nossa Stack Tecnológica</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
+                "Arquitetura de Soluções",
+                "APIs Personalizadas",
+                "Banco de Dados",
+                "Painéis de Controle",
                 "n8n Workflow Automation",
                 "AWS Cloud Services",
                 "OpenAI & IA Generativa",
-                "Node.js & JavaScript",
-                "Python & Machine Learning",
-                "Docker & Containers",
-                "APIs & Integrações",
-                "Bancos de Dados"
+                "Docker & Containers"
               ].map((tech, index) => (
                 <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <div className="text-sm font-semibold">

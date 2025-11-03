@@ -1,55 +1,32 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Bot, Database, Workflow, MessageSquare, FileText, Users, Cloud, Server } from "lucide-react"
+import { Layers, Workflow, Server, Database, Code, LayoutDashboard, Zap, Cloud } from "lucide-react"
+import Link from "next/link"
 
 export function ServicesSection() {
   const services = [
     {
-      icon: Bot,
-      title: "Agentes de IA",
-      description: "Chatbots inteligentes e assistentes virtuais que atendem seus clientes 24/7 com precisão humana.",
-      features: ["Atendimento automatizado", "Qualificação de leads", "Suporte técnico"],
-    },
-    {
       icon: Workflow,
       title: "Automação de Processos",
-      description: "Transformamos fluxos manuais em processos automatizados que funcionam sem intervenção.",
-      features: ["Processamento de dados", "Integração de sistemas", "Fluxos de aprovação"],
+      description: "Automações simples e diretas para conectar sistemas e eliminar trabalho manual. Você escolhe o escopo.",
+      features: ["Workflows n8n", "Integração de sistemas", "Automação ponta-a-ponta", "Escolha seu escopo"],
+      link: "/servicos/orquestracao-integracao",
+      color: "primary"
     },
     {
-      icon: Database,
-      title: "Integração de Dados",
-      description: "Conectamos seus sistemas e automatizamos a transferência e processamento de informações.",
-      features: ["APIs personalizadas", "Sincronização de dados", "Relatórios automáticos"],
-    },
-    {
-      icon: MessageSquare,
-      title: "Automação de Marketing",
-      description: "Campanhas inteligentes que se adaptam ao comportamento dos seus leads automaticamente.",
-      features: ["Email marketing", "Segmentação automática", "Nutrição de leads"],
-    },
-    {
-      icon: FileText,
-      title: "Processamento de Documentos",
-      description: "IA que lê, processa e organiza documentos automaticamente com precisão superior.",
-      features: ["OCR inteligente", "Classificação automática", "Extração de dados"],
-    },
-    {
-      icon: Users,
-      title: "Gestão de Clientes",
-      description: "Automatize o relacionamento com clientes desde o primeiro contato até o pós-venda.",
-      features: ["CRM automatizado", "Follow-up inteligente", "Relatórios detalhados"],
-    },
-    {
-      icon: Cloud,
-      title: "Integração AWS",
-      description: "Conectamos suas automações diretamente com a nuvem AWS para máxima escalabilidade e confiabilidade.",
-      features: ["S3, Lambda, RDS", "API Gateway", "CloudWatch", "SQS/SNS"],
+      icon: Layers,
+      title: "Plataformas Sob Medida",
+      description: "Soluções completas opcionais: API, Banco de Dados e Painel de Controle. Para quem precisa de mais.",
+      features: ["Arquitetura completa", "API + Banco de Dados", "Painel de controle visual", "Gerenciamento completo"],
+      link: "/servicos/plataformas-sob-medida",
+      color: "accent"
     },
     {
       icon: Server,
-      title: "Infraestrutura n8n",
-      description: "Escolha entre ter sua própria instância n8n ou deixar que cuidemos de toda a infraestrutura para você.",
-      features: ["Instância própria n8n", "Infraestrutura gerenciada", "Backup automático", "Monitoramento 24/7"],
+      title: "Infraestrutura Flexível",
+      description: "On-premise ou nuvem gerenciada. Suporte contínuo e manutenção para garantir disponibilidade 24/7.",
+      features: ["On-premise ou nuvem", "Monitoramento 24/7", "Contratos de sustentação", "Backup automático"],
+      link: "/servicos/infraestrutura-flexivel",
+      color: "primary"
     },
   ]
 
@@ -60,37 +37,96 @@ export function ServicesSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-balance mb-6">
             Soluções que <span className="text-primary">automatizam</span> seu negócio
           </h2>
-          <p className="text-xl text-muted-foreground text-balance max-w-2xl mx-auto">
-            Oferecemos automações personalizadas para cada área do seu negócio, liberando sua equipe para focar no que
-            realmente importa.
+          <p className="text-xl text-muted-foreground text-balance max-w-3xl mx-auto">
+            Desde automações simples até plataformas completas ponta-a-ponta. Você escolhe o escopo que precisa: 
+            apenas automação ou solução completa com API, Banco de Dados e Painel de Controle visual.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
-            <Card
-              key={index}
-              className="bg-card border-border hover:border-primary/50 transition-all duration-300 group"
-            >
+            <Link href={service.link} key={index} className="group">
+              <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 h-full group-hover:shadow-xl">
+                <CardHeader>
+                  <div className={`w-14 h-14 ${service.color === "primary" ? "bg-primary/10" : "bg-accent/10"} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <service.icon className={service.color === "primary" ? "text-primary" : "text-accent"} size={28} />
+                  </div>
+                  <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                  <CardDescription className="text-muted-foreground">{service.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
+                        <div className={`w-1.5 h-1.5 ${service.color === "primary" ? "bg-primary" : "bg-accent"} rounded-full mr-3`}></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+
+        {/* Secondary Services */}
+        <div className="mt-16 pt-12 border-t border-border">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Serviços Complementares</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Soluções especializadas que complementam nossas plataformas
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="bg-card border-border hover:border-primary/30 transition-all">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="text-primary" size={24} />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Database className="text-primary" size={24} />
                 </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">{service.description}</CardDescription>
+                <CardTitle className="text-lg">APIs Personalizadas</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <CardDescription>Desenvolvimento de APIs personalizadas para conectar seus sistemas</CardDescription>
               </CardContent>
             </Card>
-          ))}
+
+            <Card className="bg-card border-border hover:border-primary/30 transition-all">
+              <CardHeader>
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <LayoutDashboard className="text-primary" size={24} />
+                </div>
+                <CardTitle className="text-lg">Painéis de Controle</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>Criamos painéis visuais para você gerenciar e disparar automações manualmente com um clique</CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border hover:border-primary/30 transition-all">
+              <CardHeader>
+                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <Cloud className="text-accent" size={24} />
+                </div>
+                <CardTitle className="text-lg">Integração AWS</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>Lambda, S3, RDS e outros serviços AWS</CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border hover:border-primary/30 transition-all">
+              <CardHeader>
+                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="text-accent" size={24} />
+                </div>
+                <CardTitle className="text-lg">Agentes de IA</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>Chatbots e assistentes inteligentes para suporte</CardDescription>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
