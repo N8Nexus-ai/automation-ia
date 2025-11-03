@@ -5,55 +5,63 @@ import { FooterLight } from "@/components/footer-light"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Server, Shield, Zap, BarChart3, Clock, Target, Settings, ArrowLeft } from "lucide-react"
+import { CheckCircle, Server, Cloud, Shield, Clock, ArrowLeft, Zap } from "lucide-react"
 import { useContact } from "@/contexts/contact-context"
 import Link from "next/link"
 
-export default function InfraestruturaN8nPage() {
+export default function InfraestruturaFlexivelPage() {
   const { openContactModal } = useContact()
 
   const infrastructureOptions = [
     {
       icon: Server,
-      title: "Sua Própria Instância n8n",
-      description: "Controle total sobre sua infraestrutura e dados",
+      title: "On-Premise",
+      description: "Integramos na sua infraestrutura interna (Data Center próprio)",
       color: "primary",
       advantages: [
-        "Controle total sobre dados e configurações",
-        "Customização completa da instalação",
+        "Controle total sobre dados",
+        "Compliance específico",
         "Sem dependências externas",
-        "Escalabilidade conforme sua necessidade"
+        "Customização completa"
       ],
       idealFor: [
-        "Empresas com equipe técnica própria",
+        "Empresas com infraestrutura própria",
         "Necessidades específicas de compliance",
-        "Controle total sobre dados sensíveis"
+        "Dados sensíveis e críticos"
       ]
     },
     {
-      icon: Settings,
-      title: "Infraestrutura Gerenciada",
-      description: "Deixe conosco toda a complexidade técnica",
+      icon: Cloud,
+      title: "Nuvem Gerenciada",
+      description: "Cuidamos de toda a hospedagem e gerenciamento para você (AWS, DigitalOcean)",
       color: "accent",
       advantages: [
         "Zero preocupação com infraestrutura",
-        "Backup automático e recuperação",
-        "Atualizações automáticas do n8n",
-        "Monitoramento 24/7 e suporte"
+        "Escalabilidade automática",
+        "Backup automático",
+        "Monitoramento 24/7"
       ],
       idealFor: [
-        "Empresas que querem focar no negócio",
         "Equipes sem expertise técnica",
-        "Necessidade de disponibilidade máxima"
+        "Necessidade de escalabilidade",
+        "Implementação rápida"
       ]
     }
   ]
 
-  const benefits = [
-    { icon: Zap, title: "Fácil de Usar", text: "Interface visual intuitiva para criar automações complexas" },
-    { icon: Shield, title: "Open Source", text: "Código aberto, sem dependências de fornecedores" },
-    { icon: BarChart3, title: "400+ Integrações", text: "Conecte com praticamente qualquer sistema ou API" },
-    { icon: Clock, title: "Execução Confiável", text: "99.9% de uptime e execução garantida" }
+  const supportPlans = [
+    {
+      name: "Mantenha Vivo",
+      description: "Monitoramento, segurança e correção de bugs",
+      features: ["Monitoramento ativo", "Correção de bugs", "Segurança e atualizações", "Suporte básico"],
+      color: "primary"
+    },
+    {
+      name: "Piloto Automático",
+      description: "Tudo do anterior + franquia de horas para melhorias",
+      features: ["Tudo do Mantenha Vivo", "Franquia de horas/mês", "Melhorias contínuas", "Suporte prioritário"],
+      color: "accent"
+    }
   ]
 
   return (
@@ -75,52 +83,45 @@ export default function InfraestruturaN8nPage() {
           <header className="mb-12">
             <div className="flex items-center justify-center gap-2 mb-6">
               <Badge className="bg-gray-900 text-white px-4 py-1.5">
-                Serviços
+                Infraestrutura
               </Badge>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight text-gray-900">
-              Infraestrutura n8n
+              Infraestrutura Flexível & Suporte Contínuo
             </h1>
             
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Oferecemos duas opções flexíveis para sua infraestrutura n8n: sua própria instância 
-              ou nossa infraestrutura gerenciada. Escolha o que melhor se adapta ao seu negócio.
+              Nossa grande vantagem: flexibilidade. Você escolhe o modelo de infraestrutura e suporte 
+              que melhor se adapta ao seu negócio. On-premise ou nuvem gerenciada, sempre com suporte contínuo.
             </p>
           </header>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 pb-12 border-b border-gray-200">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">400+</div>
-              <div className="text-sm text-gray-600">Integrações</div>
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">100%</div>
+              <div className="text-sm text-gray-600">Flexível</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">24/7</div>
+              <div className="text-sm text-gray-600">Monitoramento</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">99.9%</div>
               <div className="text-sm text-gray-600">Uptime</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">24/7</div>
-              <div className="text-sm text-gray-600">Suporte</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">100%</div>
-              <div className="text-sm text-gray-600">Open Source</div>
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">∞</div>
+              <div className="text-sm text-gray-600">Escalável</div>
             </div>
           </div>
 
           {/* Main Content */}
           <div className="prose prose-lg max-w-none mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">O que é n8n?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Modelos de Infraestrutura</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              n8n é uma plataforma de automação de workflow open-source que permite criar 
-              automações complexas através de uma interface visual intuitiva. É a alternativa 
-              poderosa ao Zapier, com a vantagem de poder ser self-hosted ou gerenciada.
-            </p>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">Escolha Sua Infraestrutura</h2>
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              Duas opções poderosas para implementar automações com n8n:
+              Escolha o modelo que melhor se adapta às suas necessidades de segurança, compliance e controle:
             </p>
           </div>
 
@@ -166,27 +167,38 @@ export default function InfraestruturaN8nPage() {
             })}
           </div>
 
-          {/* Benefits */}
+          {/* Support Plans */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Por Que Escolher n8n?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Contratos de Sustentação</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              n8n é a plataforma de automação mais poderosa e flexível do mercado:
+              Garanta que sua automação continue funcionando perfeitamente com nossos planos de suporte:
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {benefits.map((benefit, index) => {
-                const isPrimary = index % 2 === 0
-                const bgColor = isPrimary ? "bg-primary/5" : "bg-accent/5"
-                const iconColor = isPrimary ? "text-primary" : "text-accent"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {supportPlans.map((plan, index) => {
+                const iconColor = plan.color === "primary" ? "text-primary" : "text-accent"
+                const bgColor = plan.color === "primary" ? "bg-primary/5" : "bg-accent/5"
+                const iconBg = plan.color === "primary" ? "bg-primary/10" : "bg-accent/10"
+                const checkColor = plan.color === "primary" ? "text-primary" : "text-accent"
                 return (
-                  <div key={index} className={`flex items-start gap-4 p-6 ${bgColor} rounded-lg border-2 border-transparent hover:border-primary/30 transition-all`}>
-                    <div className={`w-12 h-12 ${isPrimary ? "bg-primary/10" : "bg-accent/10"} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                      <benefit.icon className={`w-6 h-6 ${iconColor}`} />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                      <p className="text-gray-700 text-sm">{benefit.text}</p>
-                    </div>
-                  </div>
+                  <Card key={index} className={`border-2 border-transparent hover:border-primary/30 hover:shadow-xl transition-all duration-300 overflow-hidden ${bgColor}`}>
+                    <CardHeader>
+                      <div className={`w-14 h-14 ${iconBg} rounded-xl flex items-center justify-center mb-4`}>
+                        <Shield className={`w-7 h-7 ${iconColor}`} />
+                      </div>
+                      <CardTitle className="text-xl text-gray-900 mb-2 font-bold">{plan.name}</CardTitle>
+                      <CardDescription className="text-gray-700">{plan.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-3">
+                        {plan.features.map((feature, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <CheckCircle className={`w-5 h-5 mt-0.5 flex-shrink-0 ${checkColor}`} />
+                            <span className="text-gray-700 text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
                 )
               })}
             </div>
@@ -200,14 +212,14 @@ export default function InfraestruturaN8nPage() {
               </h2>
               <p className="text-gray-700 mb-6 leading-relaxed max-w-2xl mx-auto">
                 Agende uma conversa gratuita e nossa equipe ajudará você a escolher 
-                a melhor opção de infraestrutura n8n para seu negócio.
+                o melhor modelo de infraestrutura e suporte para seu negócio.
               </p>
               <Button 
                 onClick={openContactModal} 
                 size="lg" 
                 className="px-8 py-6 text-lg bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90 text-white shadow-lg hover:shadow-xl transition-all"
               >
-                Agendar Reunião
+                Agendar Reunião Gratuita
               </Button>
             </div>
           </div>
@@ -218,3 +230,4 @@ export default function InfraestruturaN8nPage() {
     </main>
   )
 }
+

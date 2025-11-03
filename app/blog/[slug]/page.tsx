@@ -63,8 +63,38 @@ export default async function BlogPostPage({ params }: Props) {
     notFound()
   }
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": post.image,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": {
+      "@type": "Organization",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexus.ai",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://n8nexus.com.br/Logo sem fundo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://n8nexus.com.br/blog/${post.slug}`
+    }
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Header />
       
       <article className="pt-24 pb-20 px-4">

@@ -4,7 +4,7 @@ export function FooterLight() {
   return (
     <footer className="py-12 px-4 bg-white relative z-50">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-8 h-8 flex items-center justify-center">
@@ -24,31 +24,62 @@ export function FooterLight() {
             </div>
           </div>
 
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-4">Serviços</h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li>
-                      <a href="/servicos" className="hover:text-gray-900 transition-colors">
-                        Agentes de IA
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/#servicos" className="hover:text-gray-900 transition-colors">
-                        Automação de Processos
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/#servicos" className="hover:text-gray-900 transition-colors">
-                        Integração AWS
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/#servicos" className="hover:text-gray-900 transition-colors">
-                        Infraestrutura n8n
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+          <div>
+            <h4 className="font-semibold text-gray-900 mb-4">Conteúdo</h4>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li>
+                <a href="/blog" className="hover:text-gray-900 transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="/servicos/plataformas-sob-medida" className="hover:text-gray-900 transition-colors">
+                  Plataformas Sob Medida
+                </a>
+              </li>
+              <li>
+                <a href="/servicos/orquestracao-integracao" className="hover:text-gray-900 transition-colors">
+                  Orquestração & Integração
+                </a>
+              </li>
+              <li>
+                <a href="/servicos/infraestrutura-flexivel" className="hover:text-gray-900 transition-colors">
+                  Infraestrutura Flexível
+                </a>
+              </li>
+              <li>
+                <a href="/servicos/agentes-de-ia" className="hover:text-gray-900 transition-colors">
+                  Agentes de IA
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-gray-900 mb-4">Serviços</h4>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li>
+                <a href="/servicos" className="hover:text-gray-900 transition-colors">
+                  Agentes de IA
+                </a>
+              </li>
+              <li>
+                <a href="/#servicos" className="hover:text-gray-900 transition-colors">
+                  Automação de Processos
+                </a>
+              </li>
+              <li>
+                <a href="/#servicos" className="hover:text-gray-900 transition-colors">
+                  Integração AWS
+                </a>
+              </li>
+              <li>
+                <a href="/#servicos" className="hover:text-gray-900 transition-colors">
+                  Infraestrutura n8n
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <div>
             <h4 className="font-semibold text-gray-900 mb-4">Empresa</h4>
