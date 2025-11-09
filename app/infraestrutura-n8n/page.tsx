@@ -1,11 +1,11 @@
 "use client"
 
 import { Header } from "@/components/header"
-import { FooterLight } from "@/components/footer-light"
+import { Footer } from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Server, Shield, Zap, BarChart3, Clock, Target, Settings, ArrowLeft } from "lucide-react"
+import { CheckCircle, Server, Shield, Zap, BarChart3, Clock, Target, Settings, ArrowLeft, ArrowRight, Sparkles, Link2, Code } from "lucide-react"
 import { useContact } from "@/contexts/contact-context"
 import Link from "next/link"
 
@@ -17,7 +17,7 @@ export default function InfraestruturaN8nPage() {
       icon: Server,
       title: "Sua Própria Instância n8n",
       description: "Controle total sobre sua infraestrutura e dados",
-      color: "primary",
+      gradient: "from-primary/20 to-primary/5",
       advantages: [
         "Controle total sobre dados e configurações",
         "Customização completa da instalação",
@@ -34,7 +34,7 @@ export default function InfraestruturaN8nPage() {
       icon: Settings,
       title: "Infraestrutura Gerenciada",
       description: "Deixe conosco toda a complexidade técnica",
-      color: "accent",
+      gradient: "from-accent/20 to-accent/5",
       advantages: [
         "Zero preocupação com infraestrutura",
         "Backup automático e recuperação",
@@ -49,172 +49,237 @@ export default function InfraestruturaN8nPage() {
     }
   ]
 
+  const stats = [
+    { value: "400+", label: "Integrações", icon: Link2 },
+    { value: "99.9%", label: "Uptime", icon: Clock },
+    { value: "24/7", label: "Suporte", icon: Shield },
+    { value: "100%", label: "Open Source", icon: Code }
+  ]
+
   const benefits = [
-    { icon: Zap, title: "Fácil de Usar", text: "Interface visual intuitiva para criar automações complexas" },
-    { icon: Shield, title: "Open Source", text: "Código aberto, sem dependências de fornecedores" },
-    { icon: BarChart3, title: "400+ Integrações", text: "Conecte com praticamente qualquer sistema ou API" },
-    { icon: Clock, title: "Execução Confiável", text: "99.9% de uptime e execução garantida" }
+    { 
+      icon: Zap, 
+      title: "Fácil de Usar", 
+      text: "Interface visual intuitiva para criar automações complexas",
+      gradient: "from-primary/20 to-primary/5"
+    },
+    { 
+      icon: Shield, 
+      title: "Open Source", 
+      text: "Código aberto, sem dependências de fornecedores",
+      gradient: "from-accent/20 to-accent/5"
+    },
+    { 
+      icon: BarChart3, 
+      title: "400+ Integrações", 
+      text: "Conecte com praticamente qualquer sistema ou API",
+      gradient: "from-primary/20 to-accent/5"
+    },
+    { 
+      icon: Clock, 
+      title: "Execução Confiável", 
+      text: "99.9% de uptime e execução garantida",
+      gradient: "from-accent/20 to-accent/5"
+    }
   ]
 
   return (
-    <main className="min-h-screen bg-white">
-      <Header />
+    <main className="min-h-screen bg-background relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 grid-pattern opacity-10"></div>
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
       
-      <article className="pt-24 pb-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          {/* Back Button */}
-          <Link 
-            href="/servicos"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-8 transition-colors"
-          >
-            <ArrowLeft size={18} />
-            <span className="font-medium">Voltar aos Serviços</span>
-          </Link>
+      <div className="relative z-10">
+        <Header />
+        
+        <article className="pt-32 pb-20 px-4">
+          <div className="container mx-auto max-w-7xl">
+            {/* Back Button */}
+            <Link 
+              href="/servicos"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors group"
+            >
+              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+              <span className="font-medium">Voltar aos Serviços</span>
+            </Link>
 
-          {/* Header */}
-          <header className="mb-12">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <Badge className="bg-gray-900 text-white px-4 py-1.5">
-                Serviços
-              </Badge>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight text-gray-900">
-              Infraestrutura n8n
-            </h1>
-            
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Oferecemos duas opções flexíveis para sua infraestrutura n8n: sua própria instância 
-              ou nossa infraestrutura gerenciada. Escolha o que melhor se adapta ao seu negócio.
-            </p>
-          </header>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 pb-12 border-b border-gray-200">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">400+</div>
-              <div className="text-sm text-gray-600">Integrações</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">99.9%</div>
-              <div className="text-sm text-gray-600">Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">24/7</div>
-              <div className="text-sm text-gray-600">Suporte</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">100%</div>
-              <div className="text-sm text-gray-600">Open Source</div>
-            </div>
-          </div>
-
-          {/* Main Content */}
-          <div className="prose prose-lg max-w-none mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">O que é n8n?</h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              n8n é uma plataforma de automação de workflow open-source que permite criar 
-              automações complexas através de uma interface visual intuitiva. É a alternativa 
-              poderosa ao Zapier, com a vantagem de poder ser self-hosted ou gerenciada.
-            </p>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">Escolha Sua Infraestrutura</h2>
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              Duas opções poderosas para implementar automações com n8n:
-            </p>
-          </div>
-
-          {/* Infrastructure Options */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {infrastructureOptions.map((option, index) => {
-              const iconColor = option.color === "primary" ? "text-primary" : "text-accent"
-              const bgColor = option.color === "primary" ? "bg-primary/5" : "bg-accent/5"
-              const iconBg = option.color === "primary" ? "bg-primary/10" : "bg-accent/10"
-              const checkColor = option.color === "primary" ? "text-primary" : "text-accent"
-              return (
-                <Card key={index} className={`border-2 border-transparent hover:border-primary/30 hover:shadow-xl transition-all duration-300 overflow-hidden ${bgColor}`}>
-                  <CardHeader>
-                    <div className={`w-14 h-14 ${iconBg} rounded-xl flex items-center justify-center mb-4`}>
-                      <option.icon className={`w-7 h-7 ${iconColor}`} />
-                    </div>
-                    <CardTitle className="text-xl text-gray-900 mb-2 font-bold">{option.title}</CardTitle>
-                    <CardDescription className="text-gray-700">{option.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div>
-                      <h3 className={`font-bold text-lg mb-3 ${iconColor}`}>Vantagens:</h3>
-                      <ul className="space-y-2">
-                        {option.advantages.map((advantage, i) => (
-                          <li key={i} className="flex items-start gap-3">
-                            <CheckCircle className={`w-5 h-5 mt-0.5 flex-shrink-0 ${checkColor}`} />
-                            <span className="text-gray-700 text-sm">{advantage}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="pt-4 border-t border-gray-200">
-                      <h3 className="font-bold text-sm text-gray-900 mb-2">Ideal para:</h3>
-                      <ul className="space-y-1">
-                        {option.idealFor.map((item, i) => (
-                          <li key={i} className="text-gray-600 text-sm">• {item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-
-          {/* Benefits */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Por Que Escolher n8n?</h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              n8n é a plataforma de automação mais poderosa e flexível do mercado:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {benefits.map((benefit, index) => {
-                const isPrimary = index % 2 === 0
-                const bgColor = isPrimary ? "bg-primary/5" : "bg-accent/5"
-                const iconColor = isPrimary ? "text-primary" : "text-accent"
-                return (
-                  <div key={index} className={`flex items-start gap-4 p-6 ${bgColor} rounded-lg border-2 border-transparent hover:border-primary/30 transition-all`}>
-                    <div className={`w-12 h-12 ${isPrimary ? "bg-primary/10" : "bg-accent/10"} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                      <benefit.icon className={`w-6 h-6 ${iconColor}`} />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                      <p className="text-gray-700 text-sm">{benefit.text}</p>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="mt-16 pt-12 border-t border-gray-200">
-            <div className="bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10 rounded-2xl p-8 text-center border-2 border-primary/20">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Qual Infraestrutura é Ideal para Você?
-              </h2>
-              <p className="text-gray-700 mb-6 leading-relaxed max-w-2xl mx-auto">
-                Agende uma conversa gratuita e nossa equipe ajudará você a escolher 
-                a melhor opção de infraestrutura n8n para seu negócio.
+            {/* Header */}
+            <header className="mb-16 animate-fade-in-up">
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-1.5">
+                  <Server size={14} className="mr-2" />
+                  n8n
+                </Badge>
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight">
+                Infraestrutura <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">n8n</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
+                Oferecemos duas opções flexíveis para sua infraestrutura n8n: sua própria instância 
+                ou nossa infraestrutura gerenciada. Escolha o que melhor se adapta ao seu negócio.
               </p>
-              <Button 
-                onClick={openContactModal} 
-                size="lg" 
-                className="px-8 py-6 text-lg bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90 text-white shadow-lg hover:shadow-xl transition-all"
-              >
-                Agendar Reunião
-              </Button>
-            </div>
+            </header>
+
+            {/* Stats */}
+            <section className="mb-20">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {stats.map((stat, index) => (
+                  <Card 
+                    key={index}
+                    className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl group text-center"
+                  >
+                    <CardContent className="p-6">
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <stat.icon className="text-primary" size={24} />
+                      </div>
+                      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm text-muted-foreground">{stat.label}</div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </section>
+
+            {/* Main Content */}
+            <section className="mb-20">
+              <div className="max-w-4xl mx-auto space-y-8">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                    O que é <span className="text-primary">n8n</span>?
+                  </h2>
+                  <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                    <p>
+                      n8n é uma plataforma de automação de workflow open-source que permite criar 
+                      automações complexas através de uma interface visual intuitiva. É a alternativa 
+                      poderosa ao Zapier, com a vantagem de poder ser self-hosted ou gerenciada.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Infrastructure Options */}
+            <section className="mb-20">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Escolha Sua <span className="text-primary">Infraestrutura</span>
+                </h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                  Duas opções poderosas para implementar automações com n8n
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {infrastructureOptions.map((option, index) => (
+                  <Card 
+                    key={index}
+                    className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl group overflow-hidden relative"
+                  >
+                    <div className={`absolute inset-0 bg-gradient-to-br ${option.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                    <CardHeader className="relative z-10">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${option.gradient} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                        <option.icon className="text-primary" size={32} />
+                      </div>
+                      <CardTitle className="text-xl mb-2">{option.title}</CardTitle>
+                      <CardDescription className="text-base">{option.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-6 relative z-10">
+                      <div>
+                        <h3 className="font-bold text-lg mb-3 text-primary">Vantagens:</h3>
+                        <ul className="space-y-2">
+                          {option.advantages.map((advantage, i) => (
+                            <li key={i} className="flex items-start gap-3">
+                              <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                              <span className="text-muted-foreground text-sm">{advantage}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="pt-4 border-t border-border">
+                        <h3 className="font-bold text-sm text-foreground mb-2">Ideal para:</h3>
+                        <ul className="space-y-1">
+                          {option.idealFor.map((item, i) => (
+                            <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
+                              <span className="text-primary mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </section>
+
+            {/* Benefits */}
+            <section className="mb-20">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Por Que Escolher <span className="text-primary">n8n</span>?
+                </h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                  n8n é a plataforma de automação mais poderosa e flexível do mercado
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <Card 
+                    key={index}
+                    className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg group overflow-hidden relative"
+                  >
+                    <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                    <CardContent className="p-6 relative z-10">
+                      <div className="flex items-start gap-4">
+                        <div className={`w-12 h-12 bg-gradient-to-br ${benefit.gradient} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                          <benefit.icon className="text-primary" size={24} />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-bold text-foreground mb-2">{benefit.title}</h3>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{benefit.text}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </section>
+
+            {/* CTA */}
+            <section className="text-center">
+              <Card className="bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 border-primary/30 overflow-hidden relative">
+                <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+                <CardContent className="p-12 relative z-10">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6">
+                    <Server className="text-primary" size={32} />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    Qual Infraestrutura é Ideal para Você?
+                  </h2>
+                  <p className="text-muted-foreground mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+                    Agende uma conversa gratuita e nossa equipe ajudará você a escolher 
+                    a melhor opção de infraestrutura n8n para seu negócio.
+                  </p>
+                  <Button 
+                    onClick={openContactModal} 
+                    size="lg" 
+                    className="px-8 py-6 text-lg group"
+                  >
+                    Agendar Reunião
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                  </Button>
+                </CardContent>
+              </Card>
+            </section>
           </div>
-        </div>
-      </article>
-      
-      <FooterLight />
+        </article>
+        
+        <Footer />
+      </div>
     </main>
   )
 }
