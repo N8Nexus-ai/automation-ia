@@ -15,7 +15,7 @@ export function ContactModal() {
   const whatsappNumber = "5511990099690"
   const whatsappMessage = "Olá! Gostaria de saber mais sobre os serviços de automação da Nexus.ai."
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
-  const calendlyLink = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1HGUchFoPVeHUZH3bCBT8HsbGy1DP78DYOKmrtWTLP5SS4dVGvcmVJ8T4IYrUZshKy8Jd7Hml-"
+  const calendlyLink = "https://calendly.com/matheus-puppe/n8nexus-conversa"
 
   const handleCopyWhatsApp = async () => {
     try {
@@ -102,7 +102,7 @@ export function ContactModal() {
             <CardContent className="pt-0">
               <div className="flex items-center justify-between bg-muted/50 rounded-lg p-3">
                 <span className="text-sm font-mono text-muted-foreground truncate flex-1 mr-2">
-                  calendar.google.com/appointments
+                  calendly.com/matheus-puppe/n8nexus-conversa
                 </span>
                 <Button
                   variant="ghost"
