@@ -43,7 +43,7 @@ export function WhatsAppFloat() {
     : "#" // Fallback para modal de contato
 
   // Link do Calendly
-  const calendlyLink = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1HGUchFoPVeHUZH3bCBT8HsbGy1DP78DYOKmrtWTLP5SS4dVGvcmVJ8T4IYrUZshKy8Jd7Hml-"
+  const calendlyLink = "https://calendly.com/matheus-puppe/n8nexus-conversa"
 
   if (!isVisible) return null
 
