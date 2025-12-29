@@ -428,3 +428,181 @@ Semana 8
 - Slug: n8n-vs-zapier-vs-make
 - Meta: Matriz objetiva para decidir a plataforma ideal por tamanho e uso.
 - Outline: criterios; matriz; custos; cenarios
+
+## 7) Briefings enxutos (Semanas 9-16)
+
+Semana 9
+25) reconciliacao automatizada de pagamentos (e-commerce)
+- Titulo: Reconciliacao automatizada de pagamentos no e-commerce
+- H1: Reconciliacao automatizada de pagamentos
+- Slug: reconciliacao-pagamentos-ecommerce
+- Meta: Automatize reconciliacoes e reduza fraudes e divergencias de pagamento.
+- Outline: problema; fluxo ideal; integracoes; alertas; indicadores
+
+26) automacao de precos e catalogo
+- Titulo: Automacao de precos e catalogo no e-commerce
+- H1: Automacao de precos e catalogo
+- Slug: automacao-precos-catalogo
+- Meta: Atualize precos e catalogo automaticamente com regras e alertas.
+- Outline: regras; integracoes; testes; governanca; exemplos
+
+27) integracao CRM e automacao de vendas
+- Titulo: Integracao de CRM e automacao de vendas: guia pratico
+- H1: Integracao de CRM e automacao de vendas
+- Slug: integracao-crm-automacao-vendas
+- Meta: Conecte CRM a canais e automatize follow-ups e pipeline.
+- Outline: dados chave; fluxos; alertas; exemplos; KPIs
+
+Semana 10
+28) checklist de implementacao RPA
+- Titulo: Checklist de implementacao RPA: do discovery ao go-live
+- H1: Checklist de implementacao RPA
+- Slug: checklist-implementacao-rpa
+- Meta: Checklist simples para reduzir riscos em projetos de RPA.
+- Outline: discovery; processos; ferramentas; testes; operacao
+
+29) erros comuns em projetos de automacao
+- Titulo: Erros comuns em projetos de automacao e como evitar
+- H1: Erros comuns em projetos de automacao
+- Slug: erros-comuns-projetos-automacao
+- Meta: Evite retrabalho com uma lista dos erros mais frequentes em automacao.
+- Outline: erros; impactos; como evitar; checklist
+
+30) seguranca e compliance em automacoes
+- Titulo: Seguranca e compliance em automacoes: guia essencial
+- H1: Seguranca e compliance em automacoes
+- Slug: seguranca-compliance-automacoes
+- Meta: Proteja dados e processos com boas praticas de seguranca em automacoes.
+- Outline: riscos; controles; logs; LGPD; auditoria
+
+Semana 11
+31) auditoria financeira automatizada
+- Titulo: Auditoria financeira automatizada: reduza riscos e tempo
+- H1: Auditoria financeira automatizada
+- Slug: auditoria-financeira-automatizada
+- Meta: Automatize auditorias e detecte inconsistencias com dados confiaveis.
+- Outline: processos; dados; alertas; relatorios; casos
+
+32) onboarding digital em 7 dias
+- Titulo: Onboarding digital em 7 dias: fluxo completo
+- H1: Onboarding digital em 7 dias
+- Slug: onboarding-digital-7-dias
+- Meta: Estruture onboarding digital com automacoes e checklists.
+- Outline: etapas; documentos; integracoes; indicadores
+
+33) relatorios executivos automatizados
+- Titulo: Relatorios executivos automatizados: dashboards que a diretoria usa
+- H1: Relatorios executivos automatizados
+- Slug: relatorios-executivos-automatizados
+- Meta: Crie relatorios executivos confiaveis e com alertas automaticos.
+- Outline: KPIs; fontes; dashboards; alertas; governanca
+
+Semana 12
+34) playbook de ROI para automacao
+- Titulo: Playbook de ROI para automacao: do zero ao resultado
+- H1: Playbook de ROI para automacao
+- Slug: playbook-roi-automacao
+- Meta: Metodo pratico para calcular ROI e priorizar automacoes.
+- Outline: baseline; custos; ganhos; priorizacao; exemplo
+
+35) hub de templates n8n por area
+- Titulo: Templates n8n por area: vendas, marketing, financeiro e RH
+- H1: Templates n8n por area
+- Slug: templates-n8n-por-area
+- Meta: Colecao de templates n8n por area para ganhar velocidade.
+- Outline: categorias; templates; como usar; casos
+
+36) arquitetura escalavel para automacoes
+- Titulo: Arquitetura escalavel para automacoes: guia para crescer
+- H1: Arquitetura escalavel para automacoes
+- Slug: arquitetura-escalavel-automacoes
+- Meta: Como projetar automacoes escalaveis com monitoramento e governanca.
+- Outline: arquitetura; filas; observabilidade; custos; exemplos
+
+Semana 13
+37) governanca de automacoes (roles, logs, auditoria)
+- Titulo: Governanca de automacoes: roles, logs e auditoria
+- H1: Governanca de automacoes
+- Slug: governanca-automacoes
+- Meta: Estabeleca governanca para reduzir riscos e manter controle.
+- Outline: roles; logs; auditoria; politicas; exemplos
+
+38) SLA e observabilidade para automacoes
+- Titulo: SLA e observabilidade para automacoes criticas
+- H1: SLA e observabilidade para automacoes
+- Slug: sla-observabilidade-automacoes
+- Meta: Como definir SLAs, alertas e observabilidade para automacoes.
+- Outline: SLAs; métricas; alertas; incidentes
+
+39) monitoramento de custos n8n
+- Titulo: Monitoramento de custos no n8n: controle e previsibilidade
+- H1: Monitoramento de custos no n8n
+- Slug: monitoramento-custos-n8n
+- Meta: Controle custos de automacao com indicadores e alertas.
+- Outline: custos; metricas; alertas; otimizacao
+
+Semana 14
+40) conectores mais usados em n8n no Brasil
+- Titulo: Conectores mais usados no n8n no Brasil
+- H1: Conectores mais usados no n8n no Brasil
+- Slug: conectores-n8n-brasil
+- Meta: Panorama dos conectores mais usados e como priorizar integracoes.
+- Outline: ranking; criterios; melhores praticas
+
+41) integrao de ERP com n8n
+- Titulo: Integracao de ERP com n8n: guia de implementacao
+- H1: Integracao de ERP com n8n
+- Slug: integracao-erp-n8n
+- Meta: Conecte ERP ao n8n com seguranca e confiabilidade.
+- Outline: requisitos; dados; testes; monitoramento
+
+42) padroes de integracao API
+- Titulo: Padroes de integracao de API: o que usar e quando
+- H1: Padroes de integracao de API
+- Slug: padroes-integracao-api
+- Meta: Conheca os padroes mais usados para integracoes robustas.
+- Outline: REST; webhooks; filas; event-driven; boas praticas
+
+Semana 15
+43) automacao de atendimento ao cliente
+- Titulo: Automacao de atendimento ao cliente: ganho de SLA e escala
+- H1: Automacao de atendimento ao cliente
+- Slug: automacao-atendimento-cliente
+- Meta: Automatize tickets e respostas sem perder qualidade.
+- Outline: jornada; integracoes; SLAs; KPIs
+
+44) automacao de tickets e SLA
+- Titulo: Automacao de tickets e SLA: fluxo end-to-end
+- H1: Automacao de tickets e SLA
+- Slug: automacao-tickets-sla
+- Meta: Fluxo completo para automacao de tickets e SLAs.
+- Outline: gatilhos; triagem; alertas; escalonamento
+
+45) automacao de follow-up comercial
+- Titulo: Automacao de follow-up comercial: mais respostas e conversoes
+- H1: Automacao de follow-up comercial
+- Slug: automacao-follow-up-comercial
+- Meta: Automatize follow-ups com cadencias e mensagens personalizadas.
+- Outline: cadencias; canais; regras; resultados
+
+Semana 16
+46) automacao de lead scoring
+- Titulo: Automacao de lead scoring: priorize quem converte
+- H1: Automacao de lead scoring
+- Slug: automacao-lead-scoring
+- Meta: Defina scores e automatize priorizacao de leads.
+- Outline: criterios; dados; score; integracoes; KPIs
+
+47) automacao de qualificacao de leads
+- Titulo: Automacao de qualificacao de leads: do MQL ao SQL
+- H1: Automacao de qualificacao de leads
+- Slug: automacao-qualificacao-leads
+- Meta: Automatize a passagem de MQL para SQL com regras claras.
+- Outline: criterios; fluxos; handoff; alertas
+
+48) automacao de propostas comerciais
+- Titulo: Automacao de propostas comerciais: crie e envie em minutos
+- H1: Automacao de propostas comerciais
+- Slug: automacao-propostas-comerciais
+- Meta: Fluxo de propostas automatico com templates e aprovacao.
+- Outline: templates; aprovacao; assinatura; follow-up
