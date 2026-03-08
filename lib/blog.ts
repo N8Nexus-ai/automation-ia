@@ -67,7 +67,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       content: contentHtml,
       ...data,
     } as BlogPost
-  } catch (error) {
+  } catch {
     return null
   }
 }

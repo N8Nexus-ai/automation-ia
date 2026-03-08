@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Separator } from "@/components/ui/separator"
 
 export function Footer() {
@@ -8,9 +9,11 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-8 h-8 flex items-center justify-center">
-                <img 
+                <Image
                   src="/Logo sem fundo.png" 
                   alt="Nexus.ai Logo" 
+                  width={32}
+                  height={32}
                   className="w-full h-full object-contain"
                 />
               </div>

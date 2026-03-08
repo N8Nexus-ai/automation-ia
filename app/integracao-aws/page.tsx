@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Cloud, Shield, Zap, BarChart3, Clock, Target, ArrowLeft, ArrowRight, Sparkles, Infinity, Activity } from "lucide-react"
+import { CheckCircle, Cloud, Shield, Zap, BarChart3, Clock, Target, ArrowLeft, ArrowRight, Infinity, Activity } from "lucide-react"
 import { useContact } from "@/contexts/contact-context"
 import Link from "next/link"
 

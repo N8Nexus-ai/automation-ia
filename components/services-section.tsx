@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Layers, Workflow, Server, Database, Code, LayoutDashboard, Zap, Cloud } from "lucide-react"
+import { Layers, Workflow, Server, Database, LayoutDashboard, Zap, Cloud } from "lucide-react"
 import Link from "next/link"
 
 export function ServicesSection() {
@@ -46,7 +46,7 @@ export function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
             <Link href={service.link} key={index} className="group">
-              <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 h-full group-hover:shadow-xl">
+              <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 h-full group-hover:shadow-xl group-hover:ring-2 group-hover:ring-primary group-hover:ring-offset-2 group-hover:ring-offset-background">
                 <CardHeader>
                   <div className={`w-14 h-14 ${service.color === "primary" ? "bg-primary/10" : "bg-accent/10"} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <service.icon className={service.color === "primary" ? "text-primary" : "text-accent"} size={28} />
