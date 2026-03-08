@@ -7,6 +7,21 @@ import remarkGfm from 'remark-gfm'
 
 const postsDirectory = path.join(process.cwd(), 'content/blog')
 
+function normalizePostHtml(htmlContent: string) {
+  return htmlContent
+    .replace(/<h1(\s|>)/g, '<h2$1')
+    .replace(/<\/h1>/g, '</h2>')
+}
+
+async function renderPostContent(content: string) {
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(html, { sanitize: false })
+    .process(content)
+
+  return normalizePostHtml(processedContent.toString())
+}
+
 export interface BlogPost {
   slug: string
   title: string
@@ -31,12 +46,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         const fileContents = fs.readFileSync(fullPath, 'utf8')
         const { data, content } = matter(fileContents)
 
-        // Convert MDX to HTML with proper formatting
-        const processedContent = await remark()
-          .use(remarkGfm)
-          .use(html, { sanitize: false })
-          .process(content)
-        const contentHtml = processedContent.toString()
+        const contentHtml = await renderPostContent(content)
 
         return {
           slug,
@@ -61,12 +71,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
-    // Convert MDX to HTML with proper formatting
-    const processedContent = await remark()
-      .use(remarkGfm)
-      .use(html, { sanitize: false })
-      .process(content)
-    const contentHtml = processedContent.toString()
+    const contentHtml = await renderPostContent(content)
 
     return {
       slug,
