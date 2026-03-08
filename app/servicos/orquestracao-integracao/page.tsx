@@ -152,7 +152,7 @@ export default function OrquestracaoIntegracaoPage() {
                   </h2>
                   <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                     <p>
-                      Resolvemos o problema de <strong className="text-foreground">"silos de dados"</strong> conectando seus sistemas existentes 
+                      Resolvemos o problema de <strong className="text-foreground">&quot;silos de dados&quot;</strong> conectando seus sistemas existentes 
                       (CRMs, ERPs, APIs) através de automações inteligentes. Utilizamos n8n e AWS para criar fluxos 
                       que eliminam trabalho manual e garantem que seus dados fluam corretamente entre sistemas.
                     </p>
@@ -267,4 +267,3 @@ export default function OrquestracaoIntegracaoPage() {
     </main>
   )
 }
-

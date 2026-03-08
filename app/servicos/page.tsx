@@ -5,12 +5,34 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Zap, Brain, Target, BarChart3, Users, Clock, Shield, ArrowRight, Sparkles } from "lucide-react"
+import { CheckCircle, Zap, Brain, Target, BarChart3, Users, Clock, Shield, ArrowRight, Sparkles, Workflow, Cloud, Server } from "lucide-react"
 import { useContact } from "@/contexts/contact-context"
 import Link from "next/link"
 
 export default function ServicosPage() {
   const { openContactModal } = useContact()
+
+  const serviceRoutes = [
+    {
+      icon: Workflow,
+      title: "Automação de Processos",
+      description: "Conecte sistemas, reduza retrabalho e crie fluxos mais rápidos com n8n.",
+      href: "/automacao-processos",
+    },
+    {
+      icon: Cloud,
+      title: "Integração AWS",
+      description: "Use Lambda, S3, RDS e filas para dar escala, monitoramento e segurança à operação.",
+      href: "/integracao-aws",
+    },
+    {
+      icon: Server,
+      title: "Infraestrutura n8n",
+      description: "Implemente ambientes próprios ou gerenciados com foco em estabilidade e suporte.",
+      href: "/infraestrutura-n8n",
+    },
+  ]
+
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
       {/* Background Effects */}
@@ -33,8 +55,59 @@ export default function ServicosPage() {
                 Serviços de <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Automação</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                Soluções completas de automação, integração e agentes de IA para transformar seu negócio
+                Projetamos automação de processos, integração entre sistemas, infraestrutura n8n e camadas em AWS para operações que precisam de escala e controle.
               </p>
+              <div className="flex flex-wrap items-center justify-center gap-3 mt-8 text-sm text-muted-foreground">
+                <span>Rotas principais:</span>
+                <Link href="/automacao-processos" className="text-primary hover:underline">
+                  Automação de Processos
+                </Link>
+                <span className="text-border">•</span>
+                <Link href="/integracao-aws" className="text-primary hover:underline">
+                  Integração AWS
+                </Link>
+                <span className="text-border">•</span>
+                <Link href="/infraestrutura-n8n" className="text-primary hover:underline">
+                  Infraestrutura n8n
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="pb-8 px-4">
+          <div className="container mx-auto max-w-7xl">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Escolha a <span className="text-primary">frente certa</span> para sua operação
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Estas são as três rotas mais procuradas por empresas que chegam até a Nexus.ai pelo Google.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {serviceRoutes.map((route) => (
+                <Link key={route.href} href={route.href} className="group">
+                  <Card className="h-full bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                    <CardHeader>
+                      <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <route.icon className="text-primary" size={28} />
+                      </div>
+                      <CardTitle className="text-2xl">{route.title}</CardTitle>
+                      <CardDescription className="text-base leading-relaxed">
+                        {route.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                        Ver detalhes
+                        <ArrowRight className="ml-2" size={18} />
+                      </span>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
@@ -44,10 +117,10 @@ export default function ServicosPage() {
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                A Realidade dos <span className="text-primary">Custos</span>: Humanos vs IA
+                Exemplo de <span className="text-primary">impacto operacional</span> com IA
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Veja quanto você está gastando com atendimento humano e como a IA pode revolucionar seus custos
+                Um dos casos mais comuns é substituir atendimento manual repetitivo por agentes com integrações, monitoramento e infraestrutura escalável.
               </p>
             </div>
 
@@ -278,10 +351,10 @@ export default function ServicosPage() {
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Tipos de <span className="text-primary">Agentes de IA</span>
+                Soluções com <span className="text-primary">IA aplicada</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Desenvolvemos diferentes tipos de agentes para atender suas necessidades específicas
+                Quando IA faz sentido, desenhamos o agente junto com integrações, dados e operação.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -566,15 +639,14 @@ export default function ServicosPage() {
             <Card className="bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 border-primary/30 overflow-hidden relative">
               <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
               <CardContent className="p-12 text-center relative z-10">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6">
                   <Sparkles className="text-primary" size={32} />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Pronto para Transformar Seu Negócio com <span className="text-primary">IA</span>?
+                  Pronto para estruturar sua próxima <span className="text-primary">automação</span>?
                 </h2>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Agende uma conversa gratuita e descubra como nossos agentes de IA podem 
-                  revolucionar seus processos e acelerar seu crescimento.
+                  Agende uma conversa gratuita para mapear o melhor caminho entre automação de processos, integração AWS, infraestrutura n8n e agentes de IA.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button onClick={openContactModal} size="lg" className="px-8 py-6 text-lg group">
@@ -582,8 +654,8 @@ export default function ServicosPage() {
                     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                   </Button>
                   <Button asChild variant="outline" size="lg" className="px-8 py-6 text-lg">
-                    <Link href="/sobre">
-                      Conhecer Nossa Equipe
+                    <Link href="/automacao-processos">
+                      Ver automação de processos
                     </Link>
                   </Button>
                 </div>

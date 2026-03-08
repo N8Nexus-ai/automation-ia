@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import Script from "next/script"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
@@ -9,29 +10,25 @@ import { WhatsAppFloat } from "@/components/whatsapp-float"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Nexus.ai - Arquiteto de Soluções Completas | Plataformas Ponta-a-Ponta",
+  title: {
+    default: 'Nexus.ai | Automacao com n8n, IA e AWS para Empresas',
+    template: '%s | Nexus.ai',
+  },
   description:
-    "Mais que automação: arquitetamos e construímos plataformas completas ponta-a-ponta. Do Back-end (APIs e Banco de Dados) ao Painel de Controle visual, criamos soluções que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
+    'Consultoria em automacao de processos, integracao de sistemas, n8n, IA e AWS para empresas que precisam reduzir trabalho manual e operar com mais controle.',
   generator: "v0.app",
   keywords: [
-    "arquitetura de soluções",
-    "plataformas sob medida",
-    "automação ponta-a-ponta",
-    "API e Banco de Dados",
-    "painel de controle visual",
-    "soluções completas",
-    "integração de sistemas",
-    "orquestração n8n",
-    "infraestrutura flexível",
-    "automação de processos",
-    "inteligência artificial",
-    "IA para empresas",
-    "consultoria em automação",
-    "nexus",
-    "n8n",
-    "transformação digital",
-    "eficência operacional",
-    "redução de custos"
+    'automacao de processos',
+    'integracao de sistemas',
+    'n8n',
+    'infraestrutura n8n',
+    'integracao aws',
+    'agentes de ia',
+    'consultoria em automacao',
+    'automacao para empresas',
+    'painel de controle',
+    'api sob medida',
+    'nexus ai',
   ],
   authors: [{ name: "Nexus.ai" }],
   creator: "Nexus.ai",
@@ -42,17 +39,31 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL('https://n8nexus.com.br'),
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   openGraph: {
-    title: "Nexus.ai - Arquiteto de Soluções Completas | Plataformas Ponta-a-Ponta",
-    description: "Mais que automação: arquitetamos e construímos plataformas completas ponta-a-ponta. Do Back-end (APIs e Banco de Dados) ao Painel de Controle visual, criamos soluções que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
-    url: 'https://n8nexus.com.br',
+    title: 'Nexus.ai | Automacao com n8n, IA e AWS para Empresas',
+    description: 'Consultoria em automacao de processos, integracao de sistemas, n8n, IA e AWS para empresas que precisam reduzir trabalho manual e operar com mais controle.',
+    url: '/',
     siteName: 'Nexus.ai',
     images: [
       {
-        url: 'https://n8nexus.com.br/Logo sem fundo.png',
+        url: '/Logo sem fundo.png',
         width: 1200,
         height: 630,
-        alt: 'Nexus.ai - Arquiteto de Soluções Completas',
+        alt: 'Nexus.ai - Automacao com n8n, IA e AWS para Empresas',
       },
     ],
     locale: 'pt_BR',
@@ -60,9 +71,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Nexus.ai - Arquiteto de Soluções Completas | Plataformas Ponta-a-Ponta",
-    description: "Mais que automação: arquitetamos e construímos plataformas completas ponta-a-ponta. Do Back-end (APIs e Banco de Dados) ao Painel de Controle visual, criamos soluções que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
-    images: ['https://n8nexus.com.br/Logo sem fundo.png'],
+    title: 'Nexus.ai | Automacao com n8n, IA e AWS para Empresas',
+    description: 'Consultoria em automacao de processos, integracao de sistemas, n8n, IA e AWS para empresas que precisam reduzir trabalho manual e operar com mais controle.',
+    images: ['/Logo sem fundo.png'],
   },
 }
 
@@ -78,7 +89,7 @@ export default function RootLayout({
     "alternateName": "N8Nexus",
     "url": "https://n8nexus.com.br",
     "logo": "https://n8nexus.com.br/Logo sem fundo.png",
-    "description": "Arquiteto de Soluções Completas. Projetamos e construímos plataformas ponta-a-ponta: do Back-end (APIs e Banco de Dados) ao Painel de Controle visual, criando soluções que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
+    "description": "Consultoria em automação de processos, integração de sistemas, n8n, IA e AWS para empresas que precisam reduzir trabalho manual e operar com mais controle.",
     "email": "contato@n8nexus.com.br",
     "address": {
       "@type": "PostalAddress",
@@ -93,9 +104,9 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Nexus.ai - Consultoria em Automação e IA",
+    "name": "Nexus.ai",
     "url": "https://n8nexus.com.br",
-    "description": "Mais que automação: arquitetamos e construímos plataformas completas ponta-a-ponta. Do Back-end (APIs e PostgreSQL) ao Front-end (Next.js), criamos painéis de controle que permitem equipes não-técnicas gerenciarem processos complexos com um clique.",
+    "description": "Consultoria em automação de processos, integração de sistemas, n8n, IA e AWS para empresas.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://n8nexus.com.br/blog?q={search_term_string}",
@@ -106,31 +117,33 @@ export default function RootLayout({
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Consultoria em Automação de Processos e IA",
+    "name": "Automação de processos com n8n, IA e AWS",
     "provider": {
       "@type": "Organization",
       "name": "Nexus.ai",
       "url": "https://n8nexus.com.br"
     },
-    "description": "Consultoria especializada em automação de processos e inteligência artificial para empresas.",
+    "description": "Consultoria especializada em automação de processos, integração de sistemas, infraestrutura n8n e agentes de IA para empresas.",
     "areaServed": "BR",
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": "https://n8nexus.com.br/contato",
-      "servicePhone": "Seu telefone aqui"
+      "serviceUrl": "https://n8nexus.com.br/contato"
     }
   }
 
   return (
-    <html lang="pt-BR" className="dark">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         {/* Favicon tags removidas - usando apenas os metadados do Next.js */}
         {/* Google tag (gtag.js) */}
-        <script
-          async
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-DEB0G534EV"
         />
-        <script
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

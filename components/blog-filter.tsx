@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -53,13 +54,15 @@ export function BlogFilter({ articles, categories }: BlogFilterProps) {
 
       {/* Articles Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredArticles.map((article, index) => (
+        {filteredArticles.map((article) => (
           <Link href={`/blog/${article.slug}`} key={article.slug} className="group">
             <Card className="h-full overflow-hidden border-gray-200 hover:shadow-xl transition-all duration-300 bg-white">
               <div className="relative aspect-video overflow-hidden bg-gray-100">
-                <img 
+                <Image
                   src={article.image} 
                   alt={article.title}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -100,7 +103,7 @@ export function BlogFilter({ articles, categories }: BlogFilterProps) {
       {filteredArticles.length === 0 && (
         <div className="text-center py-16">
           <p className="text-gray-500 text-lg">
-            Nenhum artigo encontrado para a categoria "{selectedCategory}".
+            Nenhum artigo encontrado para a categoria &quot;{selectedCategory}&quot;.
           </p>
         </div>
       )}

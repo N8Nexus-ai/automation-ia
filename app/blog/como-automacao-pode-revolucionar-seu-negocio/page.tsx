@@ -3,6 +3,7 @@ import { FooterLight } from "@/components/footer-light"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function ArticlePage() {
   return (
@@ -45,9 +46,11 @@ export default function ArticlePage() {
 
           {/* Article Image */}
           <div className="aspect-video rounded-lg mb-8 overflow-hidden relative">
-            <img 
+            <Image
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop&crop=center" 
               alt="Automação de negócios"
+              fill
+              sizes="(min-width: 1024px) 896px, 100vw"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-purple-600/20"></div>

@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { getPostBySlug, getAllPosts } from "@/lib/blog"
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
@@ -33,9 +34,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
+      url: `/blog/${post.slug}`,
       images: [post.image],
       type: 'article',
       publishedTime: post.date,
@@ -139,9 +144,11 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Article Featured Image */}
           <div className="relative aspect-video rounded-3xl mb-16 overflow-hidden shadow-2xl group">
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
-            <img 
+            <Image
               src={post.image} 
               alt={post.title}
+              fill
+              sizes="(min-width: 1280px) 1024px, 100vw"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
           </div>
@@ -231,9 +238,11 @@ export default async function BlogPostPage({ params }: Props) {
                   <Link href={`/blog/${relatedPost.slug}`} key={relatedPost.slug} className="group">
                     <Card className="h-full overflow-hidden border-gray-200 hover:border-primary hover:shadow-2xl transition-all duration-300 bg-white">
                       <div className="relative aspect-video overflow-hidden bg-gray-100">
-                        <img 
+                        <Image
                           src={relatedPost.image} 
                           alt={relatedPost.title}
+                          fill
+                          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

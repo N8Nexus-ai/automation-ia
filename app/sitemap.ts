@@ -75,7 +75,7 @@ async function getLastModified(filePath: string): Promise<Date> {
   try {
     const stats = await fs.stat(filePath)
     return stats.mtime
-  } catch (error) {
+  } catch {
     return new Date()
   }
 }
@@ -112,4 +112,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   })
 
   return [...staticEntries, ...postEntries]
+}
+
+export async function generateStaticParams() {
+  return [
+    {
+      __metadata_id__: 'sitemap.xml',
+    },
+  ]
 }

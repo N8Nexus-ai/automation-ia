@@ -1,6 +1,9 @@
+import Image from "next/image"
 import { Separator } from "@/components/ui/separator"
 
 export function FooterLight() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="py-12 px-4 bg-white relative z-50">
       <div className="container mx-auto">
@@ -8,9 +11,11 @@ export function FooterLight() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-8 h-8 flex items-center justify-center">
-                <img 
+                <Image
                   src="/Logo sem fundo.png" 
                   alt="Nexus.ai Logo" 
+                  width={32}
+                  height={32}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -101,7 +106,7 @@ export function FooterLight() {
         <Separator className="mb-8 bg-gray-200" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
-          <p>© 2025 Nexus.ai. Todos os direitos reservados.</p>
+          <p>© {currentYear} Nexus.ai. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="/privacidade/" className="hover:text-gray-900 transition-colors">
               Privacidade

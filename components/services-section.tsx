@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Layers, Workflow, Server, Database, Code, LayoutDashboard, Zap, Cloud } from "lucide-react"
+import { Layers, Workflow, Server, Database, LayoutDashboard, Zap, Cloud, Bot } from "lucide-react"
 import Link from "next/link"
 
 export function ServicesSection() {
@@ -38,15 +38,14 @@ export function ServicesSection() {
             Soluções que <span className="text-primary">automatizam</span> seu negócio
           </h2>
           <p className="text-xl text-muted-foreground text-balance max-w-3xl mx-auto">
-            Desde automações simples até plataformas completas ponta-a-ponta. Você escolhe o escopo que precisa: 
-            apenas automação ou solução completa com API, Banco de Dados e Painel de Controle visual.
+            Comece por uma automacao critica ou evolua para uma arquitetura completa com integracoes, infraestrutura n8n e camadas em AWS.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
             <Link href={service.link} key={index} className="group">
-              <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 h-full group-hover:shadow-xl">
+              <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 h-full group-hover:shadow-xl group-hover:ring-2 group-hover:ring-primary group-hover:ring-offset-2 group-hover:ring-offset-background">
                 <CardHeader>
                   <div className={`w-14 h-14 ${service.color === "primary" ? "bg-primary/10" : "bg-accent/10"} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <service.icon className={service.color === "primary" ? "text-primary" : "text-accent"} size={28} />
@@ -78,7 +77,7 @@ export function ServicesSection() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             <Card className="bg-card border-border hover:border-primary/30 transition-all">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
@@ -103,17 +102,33 @@ export function ServicesSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-border hover:border-primary/30 transition-all">
-              <CardHeader>
+            <Link href="/integracao-aws" className="group">
+              <Card className="bg-card border-border hover:border-primary/30 transition-all h-full group-hover:shadow-lg">
+                <CardHeader>
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                   <Cloud className="text-accent" size={24} />
                 </div>
                 <CardTitle className="text-lg">Integração AWS</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>Lambda, S3, RDS e outros serviços AWS</CardDescription>
-              </CardContent>
-            </Card>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>Lambda, S3, RDS e outros serviços AWS</CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/infraestrutura-n8n" className="group">
+              <Card className="bg-card border-border hover:border-primary/30 transition-all h-full group-hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Server className="text-primary" size={24} />
+                  </div>
+                  <CardTitle className="text-lg">Infraestrutura n8n</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>Ambientes proprios ou gerenciados para rodar automacoes com estabilidade</CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
 
             <Card className="bg-card border-border hover:border-primary/30 transition-all">
               <CardHeader>
@@ -126,6 +141,20 @@ export function ServicesSection() {
                 <CardDescription>Chatbots e assistentes inteligentes para suporte</CardDescription>
               </CardContent>
             </Card>
+
+            <Link href="/blog/openclaw-como-funciona-e-quando-usar-com-n8n" className="group">
+              <Card className="bg-card border-border hover:border-primary/30 transition-all h-full group-hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Bot className="text-primary" size={24} />
+                  </div>
+                  <CardTitle className="text-lg">OpenClaw</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>Camada conversacional para agentes pessoais e automacoes ad hoc com IA</CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </div>
