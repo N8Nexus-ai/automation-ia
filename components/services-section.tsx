@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Layers, Workflow, Server, Database, LayoutDashboard, Zap, Cloud } from "lucide-react"
+import { Layers, Workflow, Server, Database, LayoutDashboard, Zap, Cloud, Bot } from "lucide-react"
 import Link from "next/link"
 
 export function ServicesSection() {
@@ -77,7 +77,7 @@ export function ServicesSection() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             <Card className="bg-card border-border hover:border-primary/30 transition-all">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
@@ -141,6 +141,20 @@ export function ServicesSection() {
                 <CardDescription>Chatbots e assistentes inteligentes para suporte</CardDescription>
               </CardContent>
             </Card>
+
+            <Link href="/blog/openclaw-como-funciona-e-quando-usar-com-n8n" className="group">
+              <Card className="bg-card border-border hover:border-primary/30 transition-all h-full group-hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Bot className="text-primary" size={24} />
+                  </div>
+                  <CardTitle className="text-lg">OpenClaw</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>Camada conversacional para agentes pessoais e automacoes ad hoc com IA</CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </div>
