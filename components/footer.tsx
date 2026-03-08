@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Separator } from "@/components/ui/separator"
 
 export function Footer() {
@@ -33,9 +34,9 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Conteúdo</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/blog" className="hover:text-foreground transition-colors">
+                <Link href="/blog" className="hover:text-foreground transition-colors">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/servicos/plataformas-sob-medida" className="hover:text-foreground transition-colors">
@@ -108,15 +109,15 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>© {currentYear} Nexus.ai. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="/privacidade/" className="hover:text-foreground transition-colors">
+            <Link href="/privacidade/" className="hover:text-foreground transition-colors">
               Privacidade
-            </a>
-            <a href="/termos/" className="hover:text-foreground transition-colors">
+            </Link>
+            <Link href="/termos/" className="hover:text-foreground transition-colors">
               Termos
-            </a>
-            <a href="/sobre/" className="hover:text-foreground transition-colors">
+            </Link>
+            <Link href="/sobre/" className="hover:text-foreground transition-colors">
               Sobre
-            </a>
+            </Link>
           </div>
         </div>
       </div>

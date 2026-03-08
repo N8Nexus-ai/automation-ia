@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Separator } from "@/components/ui/separator"
 
 export function FooterLight() {
@@ -33,9 +34,9 @@ export function FooterLight() {
             <h4 className="font-semibold text-gray-900 mb-4">Conteúdo</h4>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>
-                <a href="/blog" className="hover:text-gray-900 transition-colors">
+                <Link href="/blog" className="hover:text-gray-900 transition-colors">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/servicos/plataformas-sob-medida" className="hover:text-gray-900 transition-colors">
@@ -64,24 +65,24 @@ export function FooterLight() {
             <h4 className="font-semibold text-gray-900 mb-4">Serviços</h4>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>
-                <a href="/servicos" className="hover:text-gray-900 transition-colors">
+                <Link href="/servicos" className="hover:text-gray-900 transition-colors">
                   Agentes de IA
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#servicos" className="hover:text-gray-900 transition-colors">
+                <Link href="/#servicos" className="hover:text-gray-900 transition-colors">
                   Automação de Processos
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#servicos" className="hover:text-gray-900 transition-colors">
+                <Link href="/#servicos" className="hover:text-gray-900 transition-colors">
                   Integração AWS
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#servicos" className="hover:text-gray-900 transition-colors">
+                <Link href="/#servicos" className="hover:text-gray-900 transition-colors">
                   Infraestrutura n8n
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -90,14 +91,14 @@ export function FooterLight() {
             <h4 className="font-semibold text-gray-900 mb-4">Empresa</h4>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>
-                <a href="/sobre" className="hover:text-gray-900 transition-colors">
+                <Link href="/sobre" className="hover:text-gray-900 transition-colors">
                   Sobre Nós
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contato" className="hover:text-gray-900 transition-colors">
+                <Link href="/contato" className="hover:text-gray-900 transition-colors">
                   Contato
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -108,15 +109,15 @@ export function FooterLight() {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
           <p>© {currentYear} Nexus.ai. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="/privacidade/" className="hover:text-gray-900 transition-colors">
+            <Link href="/privacidade/" className="hover:text-gray-900 transition-colors">
               Privacidade
-            </a>
-            <a href="/termos/" className="hover:text-gray-900 transition-colors">
+            </Link>
+            <Link href="/termos/" className="hover:text-gray-900 transition-colors">
               Termos
-            </a>
-            <a href="/sobre/" className="hover:text-gray-900 transition-colors">
+            </Link>
+            <Link href="/sobre/" className="hover:text-gray-900 transition-colors">
               Sobre
-            </a>
+            </Link>
           </div>
         </div>
       </div>
