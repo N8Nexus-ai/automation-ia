@@ -46,7 +46,13 @@ export async function getAllPosts(): Promise<BlogPost[]> {
       })
   )
 
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1))
+  return allPostsData.sort((a, b) => {
+    if (a.date === b.date) {
+      return a.title.localeCompare(b.title, 'pt-BR')
+    }
+
+    return a.date < b.date ? 1 : -1
+  })
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
@@ -73,6 +79,20 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 }
 
 export function getCategories(): string[] {
-  // Return static categories for now
-  return ['Todos', 'Automação', 'Tecnologia', 'AWS', 'IA', 'Negócios', 'Chatbots']
+  const fileNames = fs.readdirSync(postsDirectory)
+  const categories = new Set<string>()
+
+  fileNames
+    .filter((fileName) => fileName.endsWith('.mdx'))
+    .forEach((fileName) => {
+      const fullPath = path.join(postsDirectory, fileName)
+      const fileContents = fs.readFileSync(fullPath, 'utf8')
+      const { data } = matter(fileContents)
+
+      if (typeof data.category === 'string' && data.category.trim()) {
+        categories.add(data.category)
+      }
+    })
+
+  return ['Todos', ...Array.from(categories).sort((a, b) => a.localeCompare(b, 'pt-BR'))]
 }

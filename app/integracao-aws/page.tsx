@@ -91,6 +91,36 @@ export default function IntegracaoAwsPage() {
     }
   ]
 
+  const useCases = [
+    'Quando voce precisa conectar sistemas internos com servicos como Lambda, S3, RDS ou filas de processamento.',
+    'Quando a operacao sofre com processos manuais, baixa observabilidade e gargalos de integracao entre plataformas.',
+    'Quando o time precisa escalar automacoes sem depender de infraestrutura improvisada ou rotinas frágeis.',
+  ]
+
+  const problemsSolved = [
+    'Sincronizacao entre CRM, ERP, atendimento, dados operacionais e fluxos automatizados.',
+    'Processamento de arquivos, eventos e chamadas de API com controle, logs e monitoramento.',
+    'Arquiteturas que precisam de seguranca, escalabilidade e menor risco de indisponibilidade.',
+  ]
+
+  const faqs = [
+    {
+      question: 'Quando faz sentido integrar AWS com n8n e outros sistemas?',
+      answer:
+        'Faz sentido quando a operacao precisa de mais escala, seguranca e observabilidade do que conectores simples conseguem entregar. Isso costuma acontecer quando entram filas, arquivos, APIs internas, banco de dados e monitoramento em tempo real.',
+    },
+    {
+      question: 'Quais servicos AWS costumam entrar primeiro em um projeto?',
+      answer:
+        'Os mais comuns sao Lambda para processamento, S3 para arquivos, RDS para dados estruturados, SQS ou SNS para mensageria e CloudWatch para monitoramento. A combinacao depende do fluxo e do volume operacional.',
+    },
+    {
+      question: 'Integracao AWS serve so para empresas grandes?',
+      answer:
+        'Nao. Empresas menores tambem se beneficiam quando precisam reduzir trabalho manual, ganhar confiabilidade e preparar a base para crescimento sem refazer a arquitetura depois.',
+    },
+  ]
+
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
       {/* Background Effects */}
@@ -240,6 +270,74 @@ export default function IntegracaoAwsPage() {
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+            </section>
+
+            <section className="mb-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <Card className="bg-card border-border">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Quando usar Integração AWS</CardTitle>
+                    <CardDescription>
+                      Sinais de que sua operação já pede uma camada mais robusta de arquitetura.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-4">
+                      {useCases.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                          <span className="text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-card border-border">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Problemas que resolvemos</CardTitle>
+                    <CardDescription>
+                      Casos comuns em que a integracao certa elimina retrabalho e risco operacional.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-4">
+                      {problemsSolved.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                          <span className="text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+
+            <section className="mb-20">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-10">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    FAQ sobre <span className="text-primary">Integração AWS</span>
+                  </h2>
+                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    Respostas curtas para as dúvidas mais comuns antes de estruturar a arquitetura.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {faqs.map((faq) => (
+                    <Card key={faq.question} className="bg-card border-border">
+                      <CardHeader>
+                        <CardTitle className="text-xl leading-snug">{faq.question}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </section>
 

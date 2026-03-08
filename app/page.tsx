@@ -5,6 +5,7 @@ import { StatsSection } from "@/components/stats-section"
 import { ServicesSection } from "@/components/services-section"
 import { InfrastructureSection } from "@/components/infrastructure-section"
 import { ProcessSection } from "@/components/process-section"
+import { ProofSection } from "@/components/proof-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import { AnimatedBackground } from "@/components/animated-background"
@@ -46,6 +47,7 @@ export default function HomePage() {
         <ServicesSection />
         <InfrastructureSection />
         <ProcessSection />
+        <ProofSection />
         <CTASection />
         <Footer />
       </div>

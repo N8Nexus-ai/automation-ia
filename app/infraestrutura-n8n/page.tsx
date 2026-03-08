@@ -83,6 +83,36 @@ export default function InfraestruturaN8nPage() {
     }
   ]
 
+  const useCases = [
+    'Quando sua equipe precisa rodar n8n com mais estabilidade, backup, observabilidade e suporte.',
+    'Quando as automacoes deixaram de ser experimento e passaram a ser parte critica da operacao.',
+    'Quando existe duvida entre manter uma instancia propria ou terceirizar a camada de infraestrutura.',
+  ]
+
+  const problemsSolved = [
+    'Ambientes frágeis, com risco de indisponibilidade, atualizacao manual e pouca previsibilidade operacional.',
+    'Falta de padrao para backup, monitoramento, seguranca e sustentacao do n8n em producao.',
+    'Escalabilidade limitada quando o volume de workflows e integracoes cresce com a operacao.',
+  ]
+
+  const faqs = [
+    {
+      question: 'Quando vale ter uma infraestrutura n8n dedicada?',
+      answer:
+        'Vale quando o n8n deixa de ser teste e passa a sustentar processos reais da operacao. Nesse ponto, backup, monitoramento, atualizacoes e disponibilidade deixam de ser detalhe tecnico e viram risco de negocio.',
+    },
+    {
+      question: 'Melhor usar instancia propria ou infraestrutura gerenciada?',
+      answer:
+        'Depende do nivel de controle, compliance e maturidade tecnica do time. Instancia propria faz mais sentido para equipes com autonomia operacional; gerenciada funciona melhor quando a prioridade e foco no negocio com menos carga tecnica.',
+    },
+    {
+      question: 'Infraestrutura n8n resolve quais dores na pratica?',
+      answer:
+        'Resolve indisponibilidade, falta de padrao de backup, atualizacao manual, baixa visibilidade de erros e dificuldade para crescer o ambiente conforme aumentam os workflows e integracoes.',
+    },
+  ]
+
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
       {/* Background Effects */}
@@ -246,6 +276,74 @@ export default function InfraestruturaN8nPage() {
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+            </section>
+
+            <section className="mb-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <Card className="bg-card border-border">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Quando investir em infraestrutura n8n</CardTitle>
+                    <CardDescription>
+                      Indicadores de que o ambiente precisa sair do improviso e entrar em operacao profissional.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-4">
+                      {useCases.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                          <span className="text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-card border-border">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Problemas que resolvemos</CardTitle>
+                    <CardDescription>
+                      Situações frequentes em times que já dependem do n8n para automacao e integracao.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-4">
+                      {problemsSolved.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                          <span className="text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+
+            <section className="mb-20">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-10">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    FAQ sobre <span className="text-primary">Infraestrutura n8n</span>
+                  </h2>
+                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    Perguntas frequentes de quem esta profissionalizando a operacao de automacao.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {faqs.map((faq) => (
+                    <Card key={faq.question} className="bg-card border-border">
+                      <CardHeader>
+                        <CardTitle className="text-xl leading-snug">{faq.question}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </section>
 

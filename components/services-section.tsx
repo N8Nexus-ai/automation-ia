@@ -38,8 +38,7 @@ export function ServicesSection() {
             Soluções que <span className="text-primary">automatizam</span> seu negócio
           </h2>
           <p className="text-xl text-muted-foreground text-balance max-w-3xl mx-auto">
-            Desde automações simples até plataformas completas ponta-a-ponta. Você escolhe o escopo que precisa: 
-            apenas automação ou solução completa com API, Banco de Dados e Painel de Controle visual.
+            Comece por uma automacao critica ou evolua para uma arquitetura completa com integracoes, infraestrutura n8n e camadas em AWS.
           </p>
         </div>
 
@@ -103,17 +102,33 @@ export function ServicesSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-border hover:border-primary/30 transition-all">
-              <CardHeader>
+            <Link href="/integracao-aws" className="group">
+              <Card className="bg-card border-border hover:border-primary/30 transition-all h-full group-hover:shadow-lg">
+                <CardHeader>
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                   <Cloud className="text-accent" size={24} />
                 </div>
                 <CardTitle className="text-lg">Integração AWS</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>Lambda, S3, RDS e outros serviços AWS</CardDescription>
-              </CardContent>
-            </Card>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>Lambda, S3, RDS e outros serviços AWS</CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/infraestrutura-n8n" className="group">
+              <Card className="bg-card border-border hover:border-primary/30 transition-all h-full group-hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Server className="text-primary" size={24} />
+                  </div>
+                  <CardTitle className="text-lg">Infraestrutura n8n</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>Ambientes proprios ou gerenciados para rodar automacoes com estabilidade</CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
 
             <Card className="bg-card border-border hover:border-primary/30 transition-all">
               <CardHeader>
