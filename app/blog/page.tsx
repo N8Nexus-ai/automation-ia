@@ -31,8 +31,35 @@ export const metadata: Metadata = {
 export default async function BlogPage() {
   const articles = await getAllPosts()
   const categories = getCategories()
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Blog de Automacao com n8n, IA e AWS',
+    url: 'https://n8nexus.com.br/blog/',
+    description:
+      'Guias praticos sobre automacao de processos, integracao de sistemas, agentes de IA, AWS e operacao com n8n para empresas.',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Nexus.ai',
+      url: 'https://n8nexus.com.br',
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: articles.slice(0, 12).map((article, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `https://n8nexus.com.br/blog/${article.slug}/`,
+        name: article.title,
+      })),
+    },
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       <Header />
       
       <div className="pt-28 pb-20 px-4">
