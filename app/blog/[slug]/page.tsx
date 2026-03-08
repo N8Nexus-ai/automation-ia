@@ -1,18 +1,19 @@
-import { Header } from "@/components/header"
-import { FooterLight } from "@/components/footer-light"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, Clock, ArrowLeft } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import { getPostBySlug, getAllPosts } from "@/lib/blog"
-import { notFound } from "next/navigation"
-import { Metadata } from "next"
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { ArrowLeft, Calendar, Clock } from 'lucide-react'
+
+import { FooterLight } from '@/components/footer-light'
+import { Header } from '@/components/header'
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent } from '@/components/ui/card'
+import { getAllPosts, getPostBySlug } from '@/lib/blog'
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -23,17 +24,24 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug)
+  const { slug } = await params
+  const post = await getPostBySlug(slug)
   
   if (!post) {
-    return {
-      title: 'Artigo não encontrado',
-    }
+    notFound()
   }
 
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: [
+      post.category,
+      'automacao',
+      'n8n',
+      'ia',
+      'aws',
+      'nexus ai',
+    ],
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
@@ -41,10 +49,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.excerpt,
       url: `/blog/${post.slug}`,
-      images: [post.image],
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
+      locale: 'pt_BR',
     },
     twitter: {
       card: 'summary_large_image',
@@ -52,11 +68,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       images: [post.image],
     },
+    robots: {
+      index: true,
+      follow: true,
+    },
   }
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const post = await getPostBySlug(params.slug)
+  const { slug } = await params
+  const post = await getPostBySlug(slug)
   const allPosts = await getAllPosts()
   
   // Get related posts (same category, excluding current post)

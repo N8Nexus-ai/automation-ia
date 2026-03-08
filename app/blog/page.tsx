@@ -1,7 +1,32 @@
-import { Header } from "@/components/header"
-import { FooterLight } from "@/components/footer-light"
-import { BlogFilter } from "@/components/blog-filter"
-import { getAllPosts, getCategories } from "@/lib/blog"
+import type { Metadata } from 'next'
+
+import { BlogFilter } from '@/components/blog-filter'
+import { FooterLight } from '@/components/footer-light'
+import { Header } from '@/components/header'
+import { getAllPosts, getCategories } from '@/lib/blog'
+
+export const metadata: Metadata = {
+  title: 'Blog de Automacao com n8n, IA e AWS',
+  description:
+    'Guias praticos sobre automacao de processos, integracao de sistemas, agentes de IA, AWS e operacao com n8n para empresas.',
+  alternates: {
+    canonical: '/blog',
+  },
+  openGraph: {
+    title: 'Blog de Automacao com n8n, IA e AWS',
+    description:
+      'Guias praticos sobre automacao de processos, integracao de sistemas, agentes de IA, AWS e operacao com n8n para empresas.',
+    url: '/blog',
+    type: 'website',
+    locale: 'pt_BR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog de Automacao com n8n, IA e AWS',
+    description:
+      'Guias praticos sobre automacao de processos, integracao de sistemas, agentes de IA, AWS e operacao com n8n para empresas.',
+  },
+}
 
 export default async function BlogPage() {
   const articles = await getAllPosts()

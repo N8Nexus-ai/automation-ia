@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   },
   description:
     'Consultoria em automacao de processos, integracao de sistemas, n8n, IA e AWS para empresas que precisam reduzir trabalho manual e operar com mais controle.',
-  generator: "v0.app",
   keywords: [
     'automacao de processos',
     'integracao de sistemas',
